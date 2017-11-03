@@ -13,7 +13,9 @@ Tällä viikolla opin sen, että työn toteutuksessa ei saa käyttää mitään 
 tietorakenteita (esim. Javan listat tai hajautustaulut)
 
 ###Miikä jäi epäselväksi tai on tuottanut vaikeuksia?
-
+Gradle-projektin aloittaminen tuottaa hieman ongelmia, joten aloitan toteutuksen
+normaalina java-projektina, josta koodi on helppo ottaa myöhemmin 
+Gradle-projektiin, kun saan sen ongelmat ratkottua
 
 ###Mitä teen seuraavaksi
 Lähden toteuttamaan työhöni verkkoa, jonka avulla algoritmit voivat navigoia ja
