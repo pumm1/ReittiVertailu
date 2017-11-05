@@ -18,4 +18,4 @@ Työn laajuuden määrittely jäi myös hiukan epäselväksi ja se pitää mahdo
 ##Mitä teen seuraavaksi
 Lähden toteuttamaan työhöni verkkoa, jonka avulla algoritmit voivat navigoida ja etsiä reittiään. Lisäksi pyrin toteuttamaa alkeellisen käyttöliittymän, missä käyttäjälle näkyy jo ruukuko, jossa algoritmin reitin voi nähdä.
 
-Viikon työtunnit: 2,5h
+Viikon työtunnit: 3,5h
