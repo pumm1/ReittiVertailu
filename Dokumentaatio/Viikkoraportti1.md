@@ -15,3 +15,5 @@ normaalina java-projektina, josta koodi on helppo ottaa myöhemmin Gradle-projek
 
 ##Mitä teen seuraavaksi
 Lähden toteuttamaan työhöni verkkoa, jonka avulla algoritmit voivat navigoida ja etsiä reittiään. Lisäksi pyrin toteuttamaa alkeellisen käyttöliittymän, missä käyttäjälle näkyy jo ruukuko, jossa algoritmin reitin voi nähdä.
+
+Viikon työtunnit: 2h
