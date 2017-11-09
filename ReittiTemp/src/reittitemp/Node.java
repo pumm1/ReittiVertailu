@@ -5,12 +5,16 @@ verkon solmujen toteutus
  */
 public class Node {
 
+    protected int x;
+    protected int y;
     protected Node[] neighbours;
     protected int nodes;
     protected int color; //0=ei tutkittu, 1 = tutkittu
     protected int distance;
 
-    public Node() {
+    public Node(int a, int b) {
+        x = a;
+        y = b;
         //naapureita voi olla maksimissaan 4 ruudukossa (vertikaalinen ja horisontaalinen liike)
         neighbours = new Node[4];
         nodes = 0;
