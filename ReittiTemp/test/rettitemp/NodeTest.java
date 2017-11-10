@@ -83,5 +83,12 @@ public class NodeTest {
         }
         assertEquals(true, toimii);
     }
+    
+    @Test
+    public void visitToimii(){
+        n1.visit();
+        int color = n1.getColor();
+        assertEquals(1, color);
+    }
 
 }

@@ -15,12 +15,16 @@ public class Graph {
 
     }
 
+    public Node[][] getNodeGrid() {
+        return nGrid;
+    }
+
     //alustetaan verkko ja nodet
     public void initGraph() {
         //alustetaan nodet verkon tietojen perusteella
         for (int i = 0; i < 50; i++) {
             for (int j = 0; j < 50; j++) {
-                if (grid[i][j] == 1) {
+                if (grid[i][j] != 1) { //merkatan gridiin 1 = este, 0 =tyhjä
                     Node n = new Node(i, j);
                     nGrid[i][j] = n;
                 }
@@ -36,7 +40,7 @@ public class Graph {
                             nGrid[i][j].connect(nGrid[i + 1][j]);
                         }
                     }
-                    if (i - 1 >= 0) {   
+                    if (i - 1 >= 0) {
                         if (nGrid[i - 1][j] != null) {
                             nGrid[i][j].connect(nGrid[i - 1][j]);
                         }
