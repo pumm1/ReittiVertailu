@@ -9,12 +9,14 @@ import static org.junit.Assert.*;
 import reittitemp.Graph;
 import reittitemp.Node;
 
+
 public class GraphTest {
 
     private Graph g;
     private int[][] grid;
     private Node[][] nGrid;
     private Node n;
+    
 
     @Before
     public void setUp() {
@@ -25,6 +27,7 @@ public class GraphTest {
         g = new Graph(grid);
         g.initGraph();
         nGrid = g.getNodeGrid();
+        
     }
 
     @Test

@@ -1,18 +1,20 @@
 package reittitemp;
 
 import java.util.HashMap;
+import reittitemp.Queue;
 
 public class Graph {
 
     private int[][] grid; //mallinnettan verkolle ruudukon sisältö
     private Node[][] nGrid; //mallinnetaan myös nodeverkko
     private HashMap<Node, Node> tree; //tree-rakennelma alustavasti Javan hashmapilla, myöhemmin oma toteutus
+    private Queue<Node> queue;
 
     public Graph(int[][] g) {
         grid = g;
         nGrid = new Node[50][50]; //aletetaan alkuun ainakin ruudukko kokoon 50x50
         tree = new HashMap<>();
-
+        queue = new Queue(2500);
     }
 
     public Node[][] getNodeGrid() {
