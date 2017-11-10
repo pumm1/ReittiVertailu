@@ -8,7 +8,7 @@ public class Node {
     protected int x;
     protected int y;
     protected Node[] neighbours;
-    protected int nodes;
+    protected int nodes; //amount of neighbours, max = 4
     protected int color; //0=ei tutkittu, 1 = tutkittu
     protected int distance;
 
@@ -35,6 +35,18 @@ public class Node {
 
     }
 
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public int getColor() {
+        return color;
+    }
+
     public void connect(Node n) {
         int temp = 0;
         for (int i = 0; i < 4; i++) {
@@ -47,6 +59,10 @@ public class Node {
             neighbours[nodes++] = n;
             n.connect(this);
         }
+    }
+    
+    public int getDist(){
+        return distance;
     }
 
     public void visit() {

@@ -36,7 +36,7 @@ public class Graph {
                             nGrid[i][j].connect(nGrid[i + 1][j]);
                         }
                     }
-                    if (i - 1 >= 0) {
+                    if (i - 1 >= 0) {   
                         if (nGrid[i - 1][j] != null) {
                             nGrid[i][j].connect(nGrid[i - 1][j]);
                         }
