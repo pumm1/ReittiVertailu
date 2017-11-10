@@ -22,19 +22,18 @@ public class Node {
         distance = 99999;
     }
 
-    //lisätään solmulle naapuri
-    public void addNode(Node n) {
-        int i = 0;
-        while (i < neighbours.length) {
-            if (neighbours[i] == null) {
-                neighbours[i] = n;
-                break;
-            }
-            i++;
-        }
-
-    }
-
+//tuli vahingossa tehtyä kaksi naapurien lisäämisene liittyvää metodia, komementoidaan turha pois alustavasti
+//    public void addNode(Node n) {
+//        int i = 0;
+//        while (i < neighbours.length) {
+//            if (neighbours[i] == null) {
+//                neighbours[i] = n;
+//                break;
+//            }
+//            i++;
+//        }
+//
+//    }
     public int getX() {
         return x;
     }
@@ -47,6 +46,7 @@ public class Node {
         return color;
     }
 
+    //lisätään solmulle naapuri
     public void connect(Node n) {
         int temp = 0;
         for (int i = 0; i < 4; i++) {
@@ -55,13 +55,16 @@ public class Node {
                 break;
             }
         }
-        if (temp == 0) {
-            neighbours[nodes++] = n;
-            n.connect(this);
+        if (nodes < 3) {
+            if (temp == 0) {
+                neighbours[nodes++] = n;
+                n.connect(this);
+            }
         }
+
     }
-    
-    public int getDist(){
+
+    public int getDist() {
         return distance;
     }
 
