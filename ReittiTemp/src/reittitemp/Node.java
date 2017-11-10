@@ -64,6 +64,20 @@ public class Node {
 
     }
 
+    public void reset() {
+        color = 0;
+        distance = 99999;
+    }
+
+    public void start() {
+        distance = 0;
+        visit();
+    }
+
+    public void incDist(int i) {
+        distance = i + 1;
+    }
+
     public int getDist() {
         return distance;
     }

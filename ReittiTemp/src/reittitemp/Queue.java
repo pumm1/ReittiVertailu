@@ -22,8 +22,24 @@ public class Queue<T> {
         }
     }
 
+    public int getHead() {
+        return head;
+    }
+
+    public int getTail() {
+        return tail;
+    }
+
+    public boolean isEmpty() {
+        if (table[head] == null) {
+            return true;
+        }
+        return false;
+    }
+
     public T dequeue() {
         T ret = table[head];
+        table[head] = null;
         head++;
         if (head == n) {
             head = 0;

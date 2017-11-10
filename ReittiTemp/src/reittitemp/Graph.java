@@ -13,7 +13,6 @@ public class Graph {
     public Graph(int[][] g) {
         grid = g;
         nGrid = new Node[50][50]; //aletetaan alkuun ainakin ruudukko kokoon 50x50
-        tree = new HashMap<>();
         queue = new Queue(2500);
     }
 
@@ -60,5 +59,38 @@ public class Graph {
                 }
             }
         }
+    }
+
+    //leveyssuuntainen läpikäynti
+    //treen toteutus pitää korvata omalla systeemillä vielä
+    public HashMap<Node, Node> BFS(Node s) {
+        tree = new HashMap<>();
+        for (int i = 0; i < 50; i++) {
+            for (int j = 0; j < 50; j++) {
+                if (nGrid[i][j] != null) {
+                    nGrid[i][j].reset();
+                    tree.put(nGrid[i][j], null);
+                }
+
+            }
+        }
+        s.start(); //color[s] = black, dist[s] = 0
+        queue.enqueue(s);
+        Node u = null;
+        Node[] neighbours = null;
+//        List<Node> neighbours = null;
+        while (!queue.isEmpty()) {
+            u = queue.dequeue();
+            neighbours = u.getNeighbours();
+            for (Node v : neighbours) {
+                if (v.getColor() == 0) {
+                    v.visit(); //color =  black
+                    v.incDist(s.getDist()); //dist[v] = dist[u] + 1
+                    tree.put(v, u);
+                    queue.enqueue(v);
+                }
+            }
+        }
+        return tree;
     }
 }
