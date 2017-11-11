@@ -1,23 +1,23 @@
 # Viikkoraportti2
 
-## Mitä olen tehnyt tällä viikolla?
-Olen toteuttanut työhöni leveyssuuntaisen läpikäynnin, sekä automatisoituja testejä. Samalla olen itselleni hahmotellut (tai ainakin yrittänyt)
-hiukan, miten voisin toteuttaa leveyssuuntaiselle läpikäynnille tree-rakenteen, jossa jokaiselle verkon solmulle voidaan määrittää
-sille mappautuva solmu, josta kyseiseen solmuun päästään. Toteutin myös jo itse oman jonon rakenteen, jota hyödynnän ensimmäisessä
-algoritmissäni.
+## MitÃ¤ olen tehnyt tÃ¤llÃ¤ viikolla?
+Olen toteuttanut tyÃ¶hÃ¶ni leveyssuuntaisen lÃ¤pikÃ¤ynnin, sekÃ¤ automatisoituja testejÃ¤. Samalla olen itselleni hahmotellut (tai ainakin yrittÃ¤nyt)
+hiukan, miten voisin toteuttaa leveyssuuntaiselle lÃ¤pikÃ¤ynnille tree-rakenteen, jossa jokaiselle verkon solmulle voidaan mÃ¤Ã¤rittÃ¤Ã¤
+sille mappautuva solmu, josta kyseiseen solmuun pÃ¤Ã¤stÃ¤Ã¤n. Toteutin myÃ¶s jo itse oman jonon rakenteen, jota hyÃ¶dynnÃ¤n ensimmÃ¤isessÃ¤
+algoritmissÃ¤ni.
 
 ## Miten ohjelma on edistynt?
-Ohjelma on edistynt hyvin, koska sillä on jo yksi toimiva reittialgoritmi jota se käyttää ja samalla sillä on jo käytössä
-tietorakenteen toteutus, jono, joka ei ole Javan omasta kirjastosta suoraan otettu. Käyttöliittymän toteutus saattanee jäädä vielä
+Ohjelma on edistynt hyvin, koska sillÃ¤ on jo yksi toimiva reittialgoritmi jota se kÃ¤yttÃ¤Ã¤ ja samalla sillÃ¤ on jo kÃ¤ytÃ¶ssÃ¤
+tietorakenteen toteutus, jono, joka ei ole Javan omasta kirjastosta suoraan otettu. KÃ¤yttÃ¶liittymÃ¤n toteutus saattanee jÃ¤Ã¤dÃ¤ vielÃ¤
 seuraavalle viikolle. 
 
-## Mitä opin tällä viikolla?
-Olen oppinut leveyssuuntaisen algoritmin toteuttamisesta enemmän, kuin myös jonon toteuttamsiesta. 
+## MitÃ¤ opin tÃ¤llÃ¤ viikolla?
+Olen oppinut leveyssuuntaisen algoritmin toteuttamisesta enemmÃ¤n, kuin myÃ¶s jonon toteuttamsiesta. 
 
-##Miikä jäi epäselväksi tai on tuottanut vaikeuksia?
-En ole vielä keksinyt fiksua tapaa toteuttaa "tree"-rakennetta, missä mapataan verkon solmuille se solmu, mistä kyseiseen solmuun pääsee.
+## MiikÃ¤ jÃ¤i epÃ¤selvÃ¤ksi tai on tuottanut vaikeuksia?
+En ole vielÃ¤ keksinyt fiksua tapaa toteuttaa "tree"-rakennetta, missÃ¤ mapataan verkon solmuille se solmu, mistÃ¤ kyseiseen solmuun pÃ¤Ã¤see.
 
-## Mitä teen seuraavaksi
-Toteutan toisen reittialgoritmin ja alan nyt myös valmistelemaan ohjelman käyttöliittymää
+## MitÃ¤ teen seuraavaksi
+Toteutan toisen reittialgoritmin ja alan nyt myÃ¶s valmistelemaan ohjelman kÃ¤yttÃ¶liittymÃ¤Ã¤
 
-Viikon työtunnit: 4,5h
+Viikon tyÃ¶tunnit: 4,5h
