@@ -96,6 +96,7 @@ public class Graph {
         }
         return tree;
     }
+    
 
     
     //ilmeisesti java näkeekin koordinaatiston (Y,X) eikä (X,Y)
