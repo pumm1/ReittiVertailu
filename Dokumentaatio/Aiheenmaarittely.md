@@ -1,10 +1,10 @@
-#Aiheenmäärittely
+# Aiheenmäärittely
 
-###Aihe
+### Aihe
 Ohjelma, jossa käyttäjä voi vertailla erilaisten reittialgoritmien tuloksia ruudukossa.
 
-###Käyttäjät
+### Käyttäjät
 Yksi käyttäjä
 
-###Käyttäjän toiminnot
+### Käyttäjän toiminnot
 Aseta ruudukkoon esteitä, sekä aloitus- ja lopetussolmut verkossa. Valitse reittialgoritmi ja käynnistä reittihaku.
