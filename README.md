@@ -4,6 +4,8 @@ Työn ideana on tehdä ohjelma, missä käyttäjä voi asettaa ruudukkoon erilai
 palikoita (esteitä, aloitus- ja lopetusruudun) ja katsoa millaisen reitin
 erilaiset reittialgoritmit löytävät. Työ toteutetaan Javalla.
 
+
+### Dokumentaatiota näppärästi etusivulta
 [Määrittelydokumentti](Dokumentaatio/Maarittelydokumentti.md)
 [Aiheenmäärittely](Dokumentaatio/Aiheenmaarittely.md)
 [Viikkoraportti1](Dokumentaatio/Viikkoraportti1.md)
