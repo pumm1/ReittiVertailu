@@ -1,7 +1,7 @@
 # Viikkoraportti2
 
 ## Mitä olen tehnyt tällä viikolla?
-Olen toteuttanut työhöni leveyssuuntaisen läpikäynnin toteutusta, sekä automatisoituja testejä. Samalla olen itselleni hahmotellut
+Olen toteuttanut työhöni leveyssuuntaisen läpikäynnin, sekä automatisoituja testejä. Samalla olen itselleni hahmotellut (tai ainakin yrittänyt)
 hiukan, miten voisin toteuttaa leveyssuuntaiselle läpikäynnille tree-rakenteen, jossa jokaiselle verkon solmulle voidaan määrittää
 sille mappautuva solmu, josta kyseiseen solmuun päästään. Toteutin myös jo itse oman jonon rakenteen, jota hyödynnän ensimmäisessä
 algoritmissäni.
@@ -15,10 +15,9 @@ seuraavalle viikolle.
 Olen oppinut leveyssuuntaisen algoritmin toteuttamisesta enemmän, kuin myös jonon toteuttamsiesta. 
 
 ##Miikä jäi epäselväksi tai on tuottanut vaikeuksia?
-Tein hiukan tyhmästi reittialgoritmin toteutuksen suoraan Verkko-luokalle, mikä pitää vielä muuttaa omaksi luokakseen.
-
+En ole vielä keksinyt fiksua tapaa toteuttaa "tree"-rakennetta, missä mapataan verkon solmuille se solmu, mistä kyseiseen solmuun pääsee.
 
 ## Mitä teen seuraavaksi
+Toteutan toisen reittialgoritmin ja alan nyt myös valmistelemaan ohjelman käyttöliittymää
 
-
-Viikon työtunnit: 2,5h
+Viikon työtunnit: 4,5h
