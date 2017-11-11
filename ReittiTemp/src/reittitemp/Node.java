@@ -38,6 +38,13 @@ public class Node {
         return x;
     }
 
+    public void printNeighbours() {
+        for (Node i : neighbours) {
+            System.out.println("----");
+            System.out.println("(" + i.getX() + ", " + i.getY() + ")");
+        }
+    }
+
     public int getY() {
         return y;
     }

@@ -82,15 +82,33 @@ public class Graph {
         while (!queue.isEmpty()) {
             u = queue.dequeue();
             neighbours = u.getNeighbours();
+//            System.out.println("");
             for (Node v : neighbours) {
-                if (v.getColor() == 0) {
-                    v.visit(); //color =  black
-                    v.incDist(s.getDist()); //dist[v] = dist[u] + 1
-                    tree.put(v, u);
-                    queue.enqueue(v);
+                if (v != null) {
+                    if (v.getColor() == 0) {
+                        v.visit(); //color =  black
+                        v.incDist(s.getDist()); //dist[v] = dist[u] + 1
+                        tree.put(v, u);
+                        queue.enqueue(v);
+                    }
                 }
             }
         }
         return tree;
+    }
+
+    
+    //ilmeisesti java näkeekin koordinaatiston (Y,X) eikä (X,Y)
+    public void printGraph() {
+        for (int i = 0; i < 50; i++) {
+            for (int j = 0; j < 50; j++) {
+                if(grid[i][j] == 0){
+                    System.out.print("o");
+                }else{
+                    System.out.print("#");
+                }
+            }
+            System.out.println("");
+        }
     }
 }
