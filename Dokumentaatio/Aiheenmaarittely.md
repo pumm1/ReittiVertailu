@@ -1,7 +1,7 @@
 # Aiheenmäärittely
 
 ### Aihe
-Ohjelma, jossa käyttäjä voi vertailla erilaisten reittialgoritmien tuloksia ruudukossa.
+Ohjelma, jossa käyttäjä voi vertailla erilaisten reittialgoritmien tuloksia ruudukossa. Käyttäjä voi myös nähdä ajan, joka meni algoritmillä reitin etsimiseen.
 
 ### Käyttäjät
 Yksi käyttäjä
