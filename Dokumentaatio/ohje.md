@@ -1,4 +1,4 @@
-#Käyttöohje
+# Käyttöohje
 
 Käyttäjä näkee ohjelman käynnistämisen jälkeen ruudukon, missä jokainen ruutu toimii
 omana nappinaan, mitä voi painaa. Kun ruutua painaa, se muuttaa tilansa tyhjästä
