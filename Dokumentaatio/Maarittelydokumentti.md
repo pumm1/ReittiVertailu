@@ -1,3 +1,5 @@
+﻿# Määrittelydokumentti
+
 ## Toteutettavat algoritmit ja tietorakenteet 
 Verkko toteutetaan solmujen taulukkona ja verkon läpikäyntiin käytetään syvyys- ja leveyssuuntainen verkonläpikäynti, Dijkstran algoritmi.
 Solmut lajitellaan taulukkoon kekona Dijkstran algoritmissa. Muitakin algoritmeja saatetaan lisätä mukaan, jos aika kurssilla riittää
