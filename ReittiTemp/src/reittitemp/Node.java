@@ -11,6 +11,7 @@ public class Node {
     protected int nodes; //amount of neighbours, max = 4
     protected int color; //0=ei tutkittu, 1 = tutkittu
     protected int distance;
+    private Node prev; //mahdollinen ratkaisu hahsmapin korvaamiselle? ei ehkä toimi
 
     public Node(int a, int b) {
         x = a;
@@ -72,6 +73,7 @@ public class Node {
     }
 
     public void reset() {
+        prev = null;
         color = 0;
         distance = 99999;
     }
@@ -95,5 +97,13 @@ public class Node {
 
     public Node[] getNeighbours() {
         return neighbours;
+    }
+
+    public void setPrev(Node i) {
+        prev = i;
+    }
+
+    public Node getPrev() {
+        return prev;
     }
 }

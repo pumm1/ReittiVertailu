@@ -3,14 +3,14 @@ package reittitemp;
 import java.util.HashMap;
 
 //oma luokka BFS:n toteutukselle
-public class BFS {
+public class Bfs {
 
     private Graph graph;
     private Queue<Node> queue;
     private HashMap<Node, Node> tree;
     private Node[][] nGrid;
 
-    public BFS(Graph g) {
+    public Bfs(Graph g) {
         graph = g;
         queue = new Queue(2500);
         nGrid = graph.getNodeGrid();

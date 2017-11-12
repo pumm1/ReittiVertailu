@@ -15,7 +15,8 @@ public class ReittiTemp {
         graph.initGraph();
         Node nGrid[][] = graph.getNodeGrid();
         Node s = nGrid[0][0];
-        HashMap<Node, Node> tree = graph.BFS(s);
+        Bfs BFS = new Bfs(graph);
+        HashMap<Node, Node> tree = BFS.findRoute(s);
         graph.printGraph();
         Node u = tree.get(nGrid[2][2]);
 
