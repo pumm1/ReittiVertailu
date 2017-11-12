@@ -5,7 +5,7 @@ Olen toteuttanut työhöni leveyssuuntaisen läpikäynnin, sekä automatisoituja
 hiukan, miten voisin toteuttaa leveyssuuntaiselle läpikäynnille "tree"-rakenteen, jossa jokaiselle verkon solmulle voidaan määrittää
 sille mappautuva solmu, josta kyseiseen solmuun päästään. Toteutin myös jo itse oman jonon rakenteen, jota hyödynnän ensimmäisessä
 algoritmissäni. Aloitin myös käyttöliittymän pohjan toteutuksen ja siinä näkyy jo esteiden ja muun alueen visuaalinen puoli, kun ruudukko
-on alustettu.
+on alustettu. Aloitus- ja lopetusruudut eivät vielä käyttöliittymässä näy.
 
 ## Miten ohjelma on edistynt?
 Ohjelma on edistynt hyvin, koska sillä on jo yksi toimiva reittialgoritmi jota se käyttää ja samalla sillä on jo käytössä
