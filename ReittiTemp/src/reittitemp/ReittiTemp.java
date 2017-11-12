@@ -1,6 +1,7 @@
 package reittitemp;
 
 import java.util.HashMap;
+import kayttoliittyma.Kayttoliittyma;
 
 public class ReittiTemp {
 
@@ -19,6 +20,9 @@ public class ReittiTemp {
         HashMap<Node, Node> tree = BFS.findRoute(s);
         graph.printGraph();
         Node u = tree.get(nGrid[2][2]);
+        
+        Kayttoliittyma ui = new Kayttoliittyma(grid);
+        
 
         System.out.println("finding route to (2,2) from (0,0)");
 //        System.out.println("u.x: " + u.getX() + ", u.y: " + u.getY());
