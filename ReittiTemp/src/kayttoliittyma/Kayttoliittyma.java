@@ -1,47 +1,90 @@
 package kayttoliittyma;
 
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.GridLayout;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.HashMap;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 import javax.swing.WindowConstants;
+import reittitemp.Bfs;
+import reittitemp.Graph;
+import reittitemp.Node;
 
 public class Kayttoliittyma extends JFrame implements KeyListener {
 
     private JButton[][] squares;
     private Container contents;
-    private ButtonHandler buttonHandler;
+    private GridHandler gridHandler;
     private int[][] grid;
+    private HashMap<Node, Node> tree;
 
     public Kayttoliittyma(int[][] g) {
         super("ReittiVertailu");
         grid = g;
+        JPanel panel = new JPanel(new GridLayout(50, 50));
         squares = new JButton[50][50];
         contents = getContentPane();
-        contents.setLayout(new GridLayout(50, 50));
-        buttonHandler = new ButtonHandler(squares);
+//        contents.setLayout(new GridLayout(50, 50));
+        gridHandler = new GridHandler(squares, grid, this);
+
         for (int i = 0; i < 50; i++) {
             for (int j = 0; j < 50; j++) {
                 squares[i][j] = new JButton();
-                if(grid[i][j] == 0){
+                if (grid[i][j] == 0) {
                     squares[i][j].setBackground(Color.white);
-                }else{
+                } else {
                     squares[i][j].setBackground(Color.black);
                 }
-                contents.add(squares[i][j]);
-                squares[i][j].addActionListener(buttonHandler);
+//                contents.add(squares[i][j]);
+                squares[i][j].addActionListener(gridHandler);
                 squares[i][j].addKeyListener(this);
+                panel.add(squares[i][j]);
             }
         }
+        gridHandler.initGraph();
+        Graph gr = gridHandler.getGraph();
+        this.add(panel);
+        JButton button = new JButton("FIND ROUTE");
+        ButtonHandler bHandler = new ButtonHandler(gr, this);
+        bHandler.setAlgorithm(new Bfs(gr));
+        button.addActionListener(bHandler);
+        contents.add(button, BorderLayout.SOUTH);
+
         setSize(800, 800);
         setResizable(false);
         setLocationRelativeTo(null);
         setVisible(true);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
+    }
+
+    public void procesGrid() {
+        for (int i = 0; i < 50; i++) {
+            for (int j = 0; j < 50; j++) {
+                if (grid[i][j] == 0) {
+                    squares[i][j].setBackground(Color.white);
+                } else {
+                    squares[i][j].setBackground(Color.black);
+                }
+            }
+        }
+    }
+
+    public void drawRoute(HashMap<Node, Node> h, Node s, Node u) {
+//        squares[s.getX()][s.getY()].setBackground(Color.red);
+        tree = h;
+//        squares[u.getX()][u.getY()].setBackground(Color.green);
+        squares[u.getX()][u.getY()].setBackground(Color.yellow);
+        u = tree.get(u);
+        while (u != s && u != null) {
+            squares[u.getX()][u.getY()].setBackground(Color.yellow);
+            u = tree.get(u);
+        }
     }
 
     @Override

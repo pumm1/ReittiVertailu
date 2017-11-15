@@ -3,7 +3,7 @@ package reittitemp;
 import java.util.HashMap;
 
 //oma luokka BFS:n toteutukselle
-public class Bfs {
+public class Bfs implements Algorithm{
 
     private Graph graph;
     private Queue<Node> queue;
@@ -17,6 +17,7 @@ public class Bfs {
 
     }
 
+    @Override
     public HashMap<Node, Node> findRoute(Node s) {
         tree = new HashMap<>();
         for (int i = 0; i < 50; i++) {
