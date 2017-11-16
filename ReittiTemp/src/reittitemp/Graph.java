@@ -65,16 +65,37 @@ public class Graph {
                         if (nGrid[i + 1][j] != null) {
                             nGrid[i][j].connect(nGrid[i + 1][j]);
                         }
+                        if (j + 1 < 50) {
+                            if (nGrid[i + 1][j + 1] != null) {
+                                nGrid[i][j].connect(nGrid[i + 1][j + 1]);
+                            }
+                        }
+                        if (j - 1 >= 0) {
+                            if (nGrid[i + 1][j - 1] != null) {
+                                nGrid[i][j].connect(nGrid[i + 1][j - 1]);
+                            }
+                        }
                     }
                     if (i - 1 >= 0) {
                         if (nGrid[i - 1][j] != null) {
                             nGrid[i][j].connect(nGrid[i - 1][j]);
+                        }
+                        if (j + 1 < 50) {
+                            if (nGrid[i - 1][j + 1] != null) {
+                                nGrid[i][j].connect(nGrid[i - 1][j + 1]);
+                            }
+                        }
+                        if (j - 1 >= 0) {
+                            if (nGrid[i - 1][j - 1] != null) {
+                                nGrid[i][j].connect(nGrid[i - 1][j - 1]);
+                            }
                         }
                     }
                     if (j + 1 < 50) {
                         if (nGrid[i][j + 1] != null) {
                             nGrid[i][j].connect(nGrid[i][j + 1]);
                         }
+                        
                     }
                     if (j - 1 >= 0) {
                         if (nGrid[i][j - 1] != null) {

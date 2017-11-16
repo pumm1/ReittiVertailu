@@ -17,7 +17,7 @@ public class Node {
         x = a;
         y = b;
         //naapureita voi olla maksimissaan 4 ruudukossa (vertikaalinen ja horisontaalinen liike)
-        neighbours = new Node[4];
+        neighbours = new Node[8];
         nodes = 0;
         color = 0;
         distance = 99999;
@@ -57,13 +57,13 @@ public class Node {
     //lisätään solmulle naapuri
     public void connect(Node n) {
         int temp = 0;
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 8; i++) {
             if (neighbours[i] == n) {
                 temp++;
                 break;
             }
         }
-        if (nodes < 3) {
+        if (nodes < 7) {
             if (temp == 0) {
                 neighbours[nodes++] = n;
                 n.connect(this);
