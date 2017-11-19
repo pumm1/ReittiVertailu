@@ -52,8 +52,8 @@ public class Kayttoliittyma extends JFrame implements KeyListener {
         this.add(panel);
         JButton button = new JButton("FIND ROUTE");
         ButtonHandler bHandler = new ButtonHandler(gr, this);
-//        bHandler.setAlgorithm(new Bfs(gr));
-        bHandler.setAlgorithm(new Dijkstra(gr));
+        bHandler.setAlgorithm(new Bfs(gr));
+//        bHandler.setAlgorithm(new Dijkstra(gr));
         button.addActionListener(bHandler);
         contents.add(button, BorderLayout.SOUTH);
 
