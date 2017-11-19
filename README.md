@@ -13,3 +13,4 @@ erilaiset reittialgoritmit löytävät. Työ toteutetaan Javalla.
 [Käyttöohje](Dokumentaatio/ohje.md)
 [Viikkoraportti1](Dokumentaatio/Viikkoraportti1.md)
 [Viikkoraportti2](Dokumentaatio/Viikkoraportti2.md)
+[Viikkoraportti3](Dokumentaatio/Viikkoraportti3.md)
