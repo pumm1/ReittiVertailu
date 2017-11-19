@@ -29,17 +29,18 @@ public class ButtonHandler implements ActionListener {
 //        Object source = e.getSource();
         Node s = graph.getS();
         if (graph.getS() != null) {
-            System.out.println("s not null..");
+//            System.out.println("s not null..");
             if (graph.getU() != null) {
-                System.out.println("u not null..");
-                System.out.println("drawing route");
+//                System.out.println("u not null..");
+//                System.out.println("drawing route");
                 HashMap<Node, Node> tree = algorithm.findRoute(s);
                 Node u = graph.getU();
-                u = tree.get(u);
+//                u = tree.get(u);
+                u = u.getPrev();
                 if(u != null){
-                    System.out.println("u not null");
+//                    System.out.println("u not null");
                 }
-                graph.printGraph();
+//                graph.printGraph();
                 ui.drawRoute(tree, s, u);
             }
         }

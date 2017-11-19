@@ -39,6 +39,10 @@ public class Node {
         return x;
     }
 
+    public int getY() {
+        return y;
+    }
+
     public void printNeighbours() {
         for (Node i : neighbours) {
             System.out.println("----");
@@ -46,8 +50,21 @@ public class Node {
         }
     }
 
-    public int getY() {
-        return y;
+    public void setDist(int d) {
+        distance = d;
+    }
+
+    public void relax(Node n) {
+        for (int i = 0; i < 8; i++) {
+            if (neighbours[i] == n) {
+                if (n != null) {
+                    if (n.getDist() > distance + 1) {
+                        n.setDist(distance + 1);
+                        n.setPrev(this);
+                    }
+                }
+            }
+        }
     }
 
     public int getColor() {

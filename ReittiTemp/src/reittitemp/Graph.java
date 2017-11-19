@@ -95,7 +95,6 @@ public class Graph {
                         if (nGrid[i][j + 1] != null) {
                             nGrid[i][j].connect(nGrid[i][j + 1]);
                         }
-                        
                     }
                     if (j - 1 >= 0) {
                         if (nGrid[i][j - 1] != null) {

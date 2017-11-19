@@ -43,13 +43,14 @@ public class Bfs implements Algorithm{
                     if (v.getColor() == 0) {
                         v.visit(); //color =  black
                         v.incDist(s.getDist()); //dist[v] = dist[u] + 1
-                        tree.put(v, u);
+//                        tree.put(v, u);
+                        v.setPrev(u);
                         queue.enqueue(v);
                     }
                 }
             }
         }
-        return tree;
+        return null;
     }
 
 }

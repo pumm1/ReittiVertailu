@@ -12,6 +12,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.WindowConstants;
 import reittitemp.Bfs;
+import reittitemp.Dijkstra;
 import reittitemp.Graph;
 import reittitemp.Node;
 
@@ -51,7 +52,8 @@ public class Kayttoliittyma extends JFrame implements KeyListener {
         this.add(panel);
         JButton button = new JButton("FIND ROUTE");
         ButtonHandler bHandler = new ButtonHandler(gr, this);
-        bHandler.setAlgorithm(new Bfs(gr));
+//        bHandler.setAlgorithm(new Bfs(gr));
+        bHandler.setAlgorithm(new Dijkstra(gr));
         button.addActionListener(bHandler);
         contents.add(button, BorderLayout.SOUTH);
 
@@ -78,12 +80,15 @@ public class Kayttoliittyma extends JFrame implements KeyListener {
     public void drawRoute(HashMap<Node, Node> h, Node s, Node u) {
 //        squares[s.getX()][s.getY()].setBackground(Color.red);
         tree = h;
+//        u = u.getPrev();
 //        squares[u.getX()][u.getY()].setBackground(Color.green);
         squares[u.getX()][u.getY()].setBackground(Color.yellow);
-        u = tree.get(u);
+//        u = tree.get(u);
+        
         while (u != s && u != null) {
             squares[u.getX()][u.getY()].setBackground(Color.yellow);
-            u = tree.get(u);
+//            u = tree.get(u);
+            u = u.getPrev();
         }
     }
 
