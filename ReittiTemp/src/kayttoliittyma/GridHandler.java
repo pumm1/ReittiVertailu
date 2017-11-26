@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import reittitemp.Graph;
+import reittitemp.Verkko;
 
 public class GridHandler implements ActionListener {
 
@@ -14,6 +15,7 @@ public class GridHandler implements ActionListener {
     private int green;
     private int red;
     private Graph graph;
+    private Verkko verkko;
 
     public GridHandler(JButton[][] s, int[][] g, Kayttoliittyma k) { //tarvitaanko gridiä?
         squares = s;
@@ -60,11 +62,16 @@ public class GridHandler implements ActionListener {
         return graph;
     }
 
+    public Verkko getVerkko() {
+        return verkko;
+    }
+
     public void initGraph() {
         System.out.println("updating graph..");
-
-        graph = new Graph(grid);
-        graph.initGraph();
+        verkko = new Verkko(grid);
+        verkko.initGraph();
+//        graph = new Graph(grid);
+//        graph.initGraph();
         for (int i = 0; i < 50; i++) {
             for (int j = 0; j < 50; j++) {
                 if (squares[i][j].getBackground() == Color.yellow) {

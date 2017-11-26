@@ -5,13 +5,21 @@ import java.awt.event.ActionListener;
 import java.util.HashMap;
 import reittitemp.Algorithm;
 import reittitemp.Graph;
-import reittitemp.Node;
+import reittitemp.Vertex;
+import reittitemp.Verkko;
 
 public class ButtonHandler implements ActionListener {
 
     private Graph graph;
+    private Verkko verkko;
     private Kayttoliittyma ui;
     private Algorithm algorithm;
+
+    public ButtonHandler(Verkko v, Kayttoliittyma k) {
+        verkko = v;
+        ui = k;
+//        algorithm = a;
+    }
 
     public ButtonHandler(Graph g, Kayttoliittyma k) {
         graph = g;
@@ -25,20 +33,20 @@ public class ButtonHandler implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        graph.initGraph();
+        verkko.initGraph();
 //        Object source = e.getSource();
-        Node s = graph.getS();
-        if (graph.getS() != null) {
+        Vertex s = verkko.getS();
+        if (verkko.getS() != null) {
 //            System.out.println("s not null..");
-            if (graph.getU() != null) {
+            if (verkko.getU() != null) {
 //                System.out.println("u not null..");
 //                System.out.println("drawing route");
-                HashMap<Node, Node> tree = algorithm.findRoute(s);
-                Node u = graph.getU();
+                HashMap<Vertex, Vertex> tree = algorithm.findRoute(s);
+                Vertex u = verkko.getU();
 //                u = tree.get(u);
                 u = u.getPrev();
-                if(u != null){
-//                    System.out.println("u not null");
+                if (u != null) {
+                    System.out.println("u not null");
                 }
 //                graph.printGraph();
                 ui.drawRoute(tree, s, u);

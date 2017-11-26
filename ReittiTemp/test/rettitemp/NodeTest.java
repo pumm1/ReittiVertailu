@@ -6,25 +6,25 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import reittitemp.Node;
+import reittitemp.Vertex;
 
 public class NodeTest {
 
-    private Node n1;
-    private Node n2;
-    private Node n3;
-    private Node n4;
-    private Node n5;
-    private Node n6;
+    private Vertex n1;
+    private Vertex n2;
+    private Vertex n3;
+    private Vertex n4;
+    private Vertex n5;
+    private Vertex n6;
 
     @Before
     public void setUp() {
-        n1 = new Node(10, 10);
-        n2 = new Node(10, 11);
-        n3 = new Node(10, 9);
-        n4 = new Node(9, 10);
-        n5 = new Node(11, 10);
-        n6 = new Node(10, 11);
+        n1 = new Vertex(10, 10);
+        n2 = new Vertex(10, 11);
+        n3 = new Vertex(10, 9);
+        n4 = new Vertex(9, 10);
+        n5 = new Vertex(11, 10);
+        n6 = new Vertex(10, 11);
 
     }
 
@@ -45,7 +45,7 @@ public class NodeTest {
     @Test
     public void naapurienYhdistäminenToimii() {
         n1.connect(n2);
-        Node[] t = n1.getNeighbours();
+        Vertex[] t = n1.getNeighbours();
         int maara = 0;
         for (int i = 0; i < 4; i++) {
             if (t[i] != null) {

@@ -3,11 +3,11 @@ package reittitemp;
 public class Heap {
 
     //pinon toteutus ainakin Dijkstran algoritmia varten
-    private Node[] nodes;
+    private Vertex[] nodes;
     private int nCount;
 
     public Heap() {
-        nodes = new Node[2500];
+        nodes = new Vertex[2500];
         nCount = 0;
     }
 
@@ -15,11 +15,10 @@ public class Heap {
         return nCount;
     }
 
-    public Node[] getNodes() {
+    public Vertex[] getNodes() {
         return nodes;
     }
 
-    
     //tää jää looppiin?
     public void heapify(int i) {
         int smallest;
@@ -41,12 +40,14 @@ public class Heap {
     }
 
     public void swap(int i, int j) {
-        Node a = nodes[i];
+        nodes[i].setIndex(j);
+        nodes[j].setIndex(i);
+        Vertex a = nodes[i];
         nodes[i] = nodes[j];
         nodes[j] = a;
     }
 
-    public void insertNode(Node n) {
+    public void insertNode(Vertex n) {
         int i = nCount;
         nCount++;
 
@@ -57,18 +58,26 @@ public class Heap {
         }
 
         nodes[i] = n;
+        n.setIndex(i);
 
     }
 
-    public Node delMin() {
-        Node n = nodes[0];
+    public boolean isEmpty() {
+        if (nCount == 0) {
+            return true;
+        }
+        return false;
+    }
+
+    public Vertex delMin() {
+        Vertex n = nodes[0];
         if (nCount > 0) {
             nCount--;
         }
 //        System.out.println("nCount: " + nCount);
 //        System.out.println("nodes.len: " + nodes.length);
         int a = 0;
-        for (Node i : nodes) {
+        for (Vertex i : nodes) {
             if (i == null) {
                 break;
             }
@@ -79,7 +88,20 @@ public class Heap {
 //        System.out.println("ncount: " + nCount);
         nodes[0] = nodes[nCount];
         heapify(0);
+//        System.out.println(n.id() + ".w:" + n.getDist());
         return n;
+    }
+
+    public void dec(Vertex v) {
+//        int i = 0;
+//        while(i < 2500){
+//            if(nodes[i] == v){
+//                heapify(i);
+//                break;
+//            }
+//            i++;
+//        }
+        heapify(v.getIndex());
     }
 
     public int parent(int i) {

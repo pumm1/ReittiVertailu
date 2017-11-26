@@ -6,35 +6,35 @@ import reittitemp.Queue;
 public class Graph {
 
     private int[][] grid; //mallinnettan verkolle ruudukon sisältö
-    private Node[][] nGrid; //mallinnetaan myös nodeverkko
-    private HashMap<Node, Node> tree; //tree-rakennelma alustavasti Javan hashmapilla, myöhemmin oma toteutus
-    private Queue<Node> queue;
-    private Node u;
-    private Node s;
+    private Vertex[][] nGrid; //mallinnetaan myös nodeverkko
+    private HashMap<Vertex, Vertex> tree; //tree-rakennelma alustavasti Javan hashmapilla, myöhemmin oma toteutus
+    private Queue<Vertex> queue;
+    private Vertex u;
+    private Vertex s;
 
     public Graph(int[][] g) {
         grid = g;
-        nGrid = new Node[50][50]; //aletetaan alkuun ainakin ruudukko kokoon 50x50
+        nGrid = new Vertex[50][50]; //aletetaan alkuun ainakin ruudukko kokoon 50x50
         queue = new Queue(2500);
     }
 
-    public Node getS() {
+    public Vertex getS() {
         return s;
     }
 
-    public Node getU() {
+    public Vertex getU() {
         return u;
     }
 
-    public Node[][] getNodeGrid() {
+    public Vertex[][] getNodeGrid() {
         return nGrid;
     }
 
-    public void updateU(Node i) {
+    public void updateU(Vertex i) {
         u = i;
     }
 
-    public void updateS(Node i) {
+    public void updateS(Vertex i) {
         s = i;
     }
 
@@ -44,7 +44,7 @@ public class Graph {
         for (int i = 0; i < 50; i++) {
             for (int j = 0; j < 50; j++) {
                 if (grid[i][j] != 1) { //merkatan gridiin 1 = este, 0 =tyhjä, 2 = aloitus, 3 = stop
-                    Node n = new Node(i, j);
+                    Vertex n = new Vertex(i, j);
                     nGrid[i][j] = n;
                     if (grid[i][j] == 2) {
                         updateU(nGrid[i][j]);
@@ -108,7 +108,7 @@ public class Graph {
 
     //leveyssuuntainen läpikäynti
     //treen toteutus pitää korvata omalla systeemillä vielä
-    public HashMap<Node, Node> BFS(Node s) {
+    public HashMap<Vertex, Vertex> BFS(Vertex s) {
         tree = new HashMap<>();
         for (int i = 0; i < 50; i++) {
             for (int j = 0; j < 50; j++) {
@@ -121,14 +121,14 @@ public class Graph {
         }
         s.start(); //color[s] = black, dist[s] = 0
         queue.enqueue(s);
-        Node u = null;
-        Node[] neighbours = null;
+        Vertex u = null;
+        Vertex[] neighbours = null;
 //        List<Node> neighbours = null;
         while (!queue.isEmpty()) {
             u = queue.dequeue();
             neighbours = u.getNeighbours();
 //            System.out.println("");
-            for (Node v : neighbours) {
+            for (Vertex v : neighbours) {
                 if (v != null) {
                     if (v.getColor() == 0) {
                         v.visit(); //color =  black

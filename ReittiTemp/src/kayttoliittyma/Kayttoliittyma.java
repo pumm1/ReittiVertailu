@@ -12,9 +12,11 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.WindowConstants;
 import reittitemp.Bfs;
+import reittitemp.Dfs;
 import reittitemp.Dijkstra;
 import reittitemp.Graph;
-import reittitemp.Node;
+import reittitemp.Vertex;
+import reittitemp.Verkko;
 
 public class Kayttoliittyma extends JFrame implements KeyListener {
 
@@ -22,7 +24,7 @@ public class Kayttoliittyma extends JFrame implements KeyListener {
     private Container contents;
     private GridHandler gridHandler;
     private int[][] grid;
-    private HashMap<Node, Node> tree;
+    private HashMap<Vertex, Vertex> tree;
 
     public Kayttoliittyma(int[][] g) {
         super("ReittiVertailu");
@@ -48,12 +50,15 @@ public class Kayttoliittyma extends JFrame implements KeyListener {
             }
         }
         gridHandler.initGraph();
-        Graph gr = gridHandler.getGraph();
+//        Graph gr = gridHandler.getGraph();
+        Verkko v = gridHandler.getVerkko();
+
         this.add(panel);
         JButton button = new JButton("FIND ROUTE");
-        ButtonHandler bHandler = new ButtonHandler(gr, this);
-        bHandler.setAlgorithm(new Bfs(gr));
-//        bHandler.setAlgorithm(new Dijkstra(gr));
+        ButtonHandler bHandler = new ButtonHandler(v, this);
+//        bHandler.setAlgorithm(new Bfs(v));
+        bHandler.setAlgorithm(new Dfs(v));
+//        bHandler.setAlgorithm(new Dijkstra(v));
         button.addActionListener(bHandler);
         contents.add(button, BorderLayout.SOUTH);
 
@@ -77,14 +82,16 @@ public class Kayttoliittyma extends JFrame implements KeyListener {
         }
     }
 
-    public void drawRoute(HashMap<Node, Node> h, Node s, Node u) {
+    public void drawRoute(HashMap<Vertex, Vertex> h, Vertex s, Vertex u) {
 //        squares[s.getX()][s.getY()].setBackground(Color.red);
         tree = h;
 //        u = u.getPrev();
 //        squares[u.getX()][u.getY()].setBackground(Color.green);
-        squares[u.getX()][u.getY()].setBackground(Color.yellow);
+        if (u != null) {
+            squares[u.getX()][u.getY()].setBackground(Color.yellow);
+        }
 //        u = tree.get(u);
-        
+
         while (u != s && u != null) {
             squares[u.getX()][u.getY()].setBackground(Color.yellow);
 //            u = tree.get(u);

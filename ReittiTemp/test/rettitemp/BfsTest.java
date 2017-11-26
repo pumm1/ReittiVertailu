@@ -9,7 +9,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import reittitemp.Bfs;
 import reittitemp.Graph;
-import reittitemp.Node;
+import reittitemp.Vertex;
 
 public class BfsTest {
 
@@ -31,10 +31,10 @@ public class BfsTest {
     @Test
     public void BFSToimiii() {
         
-        Node[][] nGrid = graph.getNodeGrid();
-        Node s = nGrid[0][0];
-        HashMap<Node, Node> tree = bfs.findRoute(s);
-        Node u = tree.get(nGrid[2][2]);
+        Vertex[][] nGrid = graph.getNodeGrid();
+        Vertex s = nGrid[0][0];
+        HashMap<Vertex, Vertex> tree = bfs.findRoute(s);
+        Vertex u = tree.get(nGrid[2][2]);
         assertEquals(nGrid[1][2], u);
         u = tree.get(u);
         assertEquals(nGrid[0][2], u);
