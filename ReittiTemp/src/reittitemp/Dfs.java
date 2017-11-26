@@ -2,7 +2,7 @@ package reittitemp;
 
 import java.util.HashMap;
 
-public class Dfs implements Algorithm {
+public class Dfs implements Algorithm { //edes jotain, jonka toteuttaminen ei tuottanut ongelmia
 
     private Verkko verkko;
     private Vertex[][] nGrid;
