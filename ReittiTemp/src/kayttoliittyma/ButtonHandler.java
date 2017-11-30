@@ -41,7 +41,7 @@ public class ButtonHandler implements ActionListener {
             if (verkko.getU() != null) {
 //                System.out.println("u not null..");
 //                System.out.println("drawing route");
-                HashMap<Vertex, Vertex> tree = algorithm.findRoute(s);
+                algorithm.findRoute(s);
                 Vertex u = verkko.getU();
 //                u = tree.get(u);
                 u = u.getPrev();
@@ -49,7 +49,7 @@ public class ButtonHandler implements ActionListener {
                     System.out.println("u not null");
                 }
 //                graph.printGraph();
-                ui.drawRoute(tree, s, u);
+                ui.drawRoute(s, u);
             }
         }
         System.out.println("diu diu!");

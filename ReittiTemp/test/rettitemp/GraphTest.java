@@ -48,20 +48,5 @@ public class GraphTest {
         assertEquals(2497, maara);
     }
 
-    @Test
-    public void BFStoimii() {
-
-        Vertex s = nGrid[1][0];
-        HashMap<Vertex, Vertex> tree = g.BFS(s);
-        Vertex u = nGrid[0][3];
-        u = tree.get(u);
-        assertEquals(nGrid[1][3], u);
-        u = tree.get(u);
-        assertEquals(nGrid[1][2], u);
-        u = tree.get(u);
-        assertEquals(nGrid[1][1], u);
-        u = tree.get(u);
-        assertEquals(s, u);
-    }
 
 }

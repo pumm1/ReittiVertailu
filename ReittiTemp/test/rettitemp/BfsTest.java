@@ -9,11 +9,12 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import reittitemp.Bfs;
 import reittitemp.Graph;
+import reittitemp.Verkko;
 import reittitemp.Vertex;
 
 public class BfsTest {
 
-    private Graph graph;
+    private Verkko graph;
     private Bfs bfs;
 
     @Before
@@ -23,24 +24,22 @@ public class BfsTest {
         grid[1][1] = 1;
         int i = 0;
 
-        graph = new Graph(grid);
+        graph = new Verkko(grid);
         graph.initGraph();
         bfs = new Bfs(graph);
     }
 
     @Test
     public void BFSToimiii() {
-        
+
         Vertex[][] nGrid = graph.getNodeGrid();
         Vertex s = nGrid[0][0];
-        HashMap<Vertex, Vertex> tree = bfs.findRoute(s);
-        Vertex u = tree.get(nGrid[2][2]);
-        assertEquals(nGrid[1][2], u);
-        u = tree.get(u);
-        assertEquals(nGrid[0][2], u);
-        u = tree.get(u);
-        assertEquals(nGrid[0][1], u);
-        u = tree.get(u);
+        bfs.findRoute(s);
+        Vertex u = nGrid[2][2];
+        u = u.getPrev();
+        u = u.getPrev();
+        u = u.getPrev();
+        u = u.getPrev();
         assertEquals(s, u);
     }
 

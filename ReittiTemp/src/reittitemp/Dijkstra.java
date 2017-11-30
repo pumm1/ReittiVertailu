@@ -55,7 +55,7 @@ public class Dijkstra implements Algorithm {
     }
 
     @Override
-    public HashMap<Vertex, Vertex> findRoute(Vertex s) {
+    public void findRoute(Vertex s) {
         nodes = verkko.getVertexes();
         System.out.println("alkaa");
         init(s);
@@ -93,7 +93,6 @@ public class Dijkstra implements Algorithm {
 //            System.out.println("heapSize:" + nCount);
         }
         System.out.println("done");
-        return null;
     }
 
 }

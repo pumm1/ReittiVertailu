@@ -5,6 +5,7 @@ public class Array<T> {
     private T[] list;
     private int count;
     private int max;
+    private T type = null;
 
     public Array(int s) {
         list = (T[]) new Object[s];
@@ -29,7 +30,10 @@ public class Array<T> {
     }
 
     public T get(int i) {
-        return list[i];
+        if (i < count && i >= 0) {
+            return list[i];
+        }
+        return null;
     }
 
     public T[] getList() {

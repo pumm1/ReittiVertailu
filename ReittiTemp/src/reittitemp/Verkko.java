@@ -3,11 +3,10 @@ package reittitemp;
 import java.util.*;
 
 public class Verkko {
-    
+
     /*
     alustava korvike Graph-luokalle, sisällöltään vähän sekavahko nyt, kun koittanut sovitella Edgeä käyttöön myös
-    */
-
+     */
     private Array<Array<Vertex>> list; //vieruslistan toteutus
     private int[][] grid;
     private Vertex[][] nGrid;
@@ -90,33 +89,25 @@ public class Verkko {
                 if (nGrid[i][j] != null) {
                     if (i + 1 < 50) {
                         if (nGrid[i + 1][j] != null) {
-                            ed = new Edge(e, nGrid[i][j], nGrid[i + 1][j], 1);
-                            edges.add(ed);
-                            e++;
+
                             addEdge(nGrid[i][j], nGrid[i + 1][j]);
                         }
                     }
                     if (i - 1 >= 0) {
                         if (nGrid[i - 1][j] != null) {
-                            ed = new Edge(e, nGrid[i][j], nGrid[i - 1][j], 1);
-                            edges.add(ed);
-                            e++;
+
                             addEdge(nGrid[i][j], nGrid[i - 1][j]);
                         }
                     }
                     if (j + 1 < 50) {
                         if (nGrid[i][j + 1] != null) {
-                            ed = new Edge(e, nGrid[i][j], nGrid[i][j + 1], 1);
-                            edges.add(ed);
-                            e++;
+
                             addEdge(nGrid[i][j], nGrid[i][j + 1]);
                         }
                     }
                     if (j - 1 >= 0) {
                         if (nGrid[i][j - 1] != null) {
-                            ed = new Edge(e, nGrid[i][j], nGrid[i][j - 1], 1);
-                            edges.add(ed);
-                            e++;
+
                             addEdge(nGrid[i][j], nGrid[i][j - 1]);
                         }
                     }

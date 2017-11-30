@@ -25,10 +25,14 @@ public class Kayttoliittyma extends JFrame implements KeyListener {
     private GridHandler gridHandler;
     private int[][] grid;
     private HashMap<Vertex, Vertex> tree;
+    private int alg;
+    private ButtonHandler bHandler;
+    private Verkko verkko;
 
     public Kayttoliittyma(int[][] g) {
         super("ReittiVertailu");
         grid = g;
+        alg = 0;
         JPanel panel = new JPanel(new GridLayout(50, 50));
         squares = new JButton[50][50];
         contents = getContentPane();
@@ -51,14 +55,12 @@ public class Kayttoliittyma extends JFrame implements KeyListener {
         }
         gridHandler.initGraph();
 //        Graph gr = gridHandler.getGraph();
-        Verkko v = gridHandler.getVerkko();
+        verkko = gridHandler.getVerkko();
 
         this.add(panel);
         JButton button = new JButton("FIND ROUTE");
-        ButtonHandler bHandler = new ButtonHandler(v, this);
-//        bHandler.setAlgorithm(new Bfs(v));
-        bHandler.setAlgorithm(new Dfs(v));
-//        bHandler.setAlgorithm(new Dijkstra(v));
+        bHandler = new ButtonHandler(verkko, this);
+        setAlgorithm();
         button.addActionListener(bHandler);
         contents.add(button, BorderLayout.SOUTH);
 
@@ -82,15 +84,11 @@ public class Kayttoliittyma extends JFrame implements KeyListener {
         }
     }
 
-    public void drawRoute(HashMap<Vertex, Vertex> h, Vertex s, Vertex u) {
-//        squares[s.getX()][s.getY()].setBackground(Color.red);
-        tree = h;
-//        u = u.getPrev();
-//        squares[u.getX()][u.getY()].setBackground(Color.green);
+    public void drawRoute(Vertex s, Vertex u) {
+
         if (u != null) {
             squares[u.getX()][u.getY()].setBackground(Color.yellow);
         }
-//        u = tree.get(u);
 
         while (u != s && u != null) {
             squares[u.getX()][u.getY()].setBackground(Color.yellow);
@@ -99,12 +97,31 @@ public class Kayttoliittyma extends JFrame implements KeyListener {
         }
     }
 
+    public void setAlgorithm() {
+        String algo = "";
+        if (alg == 0) {
+            bHandler.setAlgorithm(new Bfs(verkko));
+            algo = "bfs";
+        } else if (alg == 1) {
+            bHandler.setAlgorithm(new Dfs(verkko));
+            algo = "dfs";
+        } else {
+            bHandler.setAlgorithm(new Dijkstra(verkko));
+            algo = "dijkstra";
+        }
+        System.out.println("käytössä oleva algoritmi: " + algo);
+    }
+
     @Override
     public void keyTyped(KeyEvent ke) {
     }
 
     @Override
-    public void keyPressed(KeyEvent ke) {
+    public void keyPressed(KeyEvent k) {
+        if (k.getKeyCode() == KeyEvent.VK_A) {
+            alg = (alg + 1) % 3;
+            setAlgorithm();
+        }
     }
 
     @Override

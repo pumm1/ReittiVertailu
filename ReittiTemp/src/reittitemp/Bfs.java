@@ -25,7 +25,7 @@ public class Bfs implements Algorithm {
     }
 
     @Override
-    public HashMap<Vertex, Vertex> findRoute(Vertex s) {
+    public void findRoute(Vertex s) {
         tree = new HashMap<>();
         for (int i = 0; i < 50; i++) {
             for (int j = 0; j < 50; j++) {
@@ -40,30 +40,9 @@ public class Bfs implements Algorithm {
         queue.enqueue(s);
         Vertex u = null;
         Vertex[] neighbours = null;
-//        Array<Vertex> neigh = null;
-//        List<Node> neighbours = null;
         while (!queue.isEmpty()) {
-
             u = queue.dequeue();
-//            System.out.println("u:" + u.id());
-//            neigh = verkko.getNeighbours(u.id());
             neighbours = u.getNeighbours();
-//            for (int i = 0; i < neigh.getSize(); i++) {
-//                Node v = neigh.get(i);
-//                if (v != null) {
-//                    System.out.println("v:" + v.id());
-//                    if (v.getColor() == 0) {
-//                        v.visit();
-//                        v.incDist(u.getDist());
-////                    System.out.println(neigh.get(i).getId() + " prev is : " + u.getId());
-//                        v.setPrev(u);
-//                        System.out.println(v.id() + " prev: " + u.id());
-////                    System.out.println("v: " + v.getId() + ",  u: " + u.getId());
-//                        queue.enqueue(v);
-//                    }
-//                }
-//            }
-//            System.out.println("");
             for (Vertex v : neighbours) {
                 if (v != null) {
                     if (v.getColor() == 0) {
@@ -76,7 +55,6 @@ public class Bfs implements Algorithm {
                 }
             }
         }
-        return null;
     }
 
 }

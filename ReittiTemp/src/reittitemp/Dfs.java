@@ -38,9 +38,9 @@ public class Dfs implements Algorithm { //edes jotain, jonka toteuttaminen ei tu
     }
 
     @Override
-    public HashMap<Vertex, Vertex> findRoute(Vertex s) {
+    public void findRoute(Vertex s) {
         DFS(s);
-        return null;
+        
     }
 
 }
