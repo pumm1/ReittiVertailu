@@ -3,7 +3,7 @@ package reittitemp;
 import java.util.*;
 import kayttoliittyma.Kayttoliittyma;
 
-public class ReittiTemp {
+public class Main {
 
     public static void main(String[] args) {
         Random r = new Random();

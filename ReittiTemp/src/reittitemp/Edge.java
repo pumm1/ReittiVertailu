@@ -1,6 +1,6 @@
 package reittitemp;
 
-public class Edge {
+public class Edge { /*mahdollinen turha luokka, tehty vain  omia kokeiluja varten*/
 
     private Vertex source;
     private Vertex destination;
