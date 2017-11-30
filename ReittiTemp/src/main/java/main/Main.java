@@ -1,4 +1,4 @@
-package reittitemp;
+package main.java.main;
 
 import java.util.*;
 import kayttoliittyma.Kayttoliittyma;
