@@ -72,16 +72,9 @@ public class Kayttoliittyma extends JFrame implements KeyListener {
 
     }
 
-    public void procesGrid() {
-        for (int i = 0; i < 50; i++) {
-            for (int j = 0; j < 50; j++) {
-                if (grid[i][j] == 0) {
-                    squares[i][j].setBackground(Color.white);
-                } else {
-                    squares[i][j].setBackground(Color.black);
-                }
-            }
-        }
+    public void processGrid() {
+
+        gridHandler.resetGrid();
     }
 
     public void drawRoute(Vertex s, Vertex u) {
@@ -121,6 +114,10 @@ public class Kayttoliittyma extends JFrame implements KeyListener {
         if (k.getKeyCode() == KeyEvent.VK_A) {
             alg = (alg + 1) % 3;
             setAlgorithm();
+        } else if (k.getKeyCode() == KeyEvent.VK_R) {
+            verkko.resetGrid();
+            processGrid();
+            System.out.println("reset!");
         }
     }
 

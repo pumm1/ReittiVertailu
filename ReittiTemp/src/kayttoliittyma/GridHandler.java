@@ -58,6 +58,16 @@ public class GridHandler implements ActionListener {
         initGraph(); //päivitä verkko
     }
 
+    public void resetGrid() {
+        green = 0;
+        red = 0;
+        for (int i = 0; i < 50; i++) {
+            for (int j = 0; j < 50; j++) {
+                squares[i][j].setBackground(Color.white);
+            }
+        }
+    }
+
     public Graph getGraph() {
         return graph;
     }

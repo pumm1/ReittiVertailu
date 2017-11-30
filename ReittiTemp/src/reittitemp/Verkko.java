@@ -17,6 +17,7 @@ public class Verkko {
 
     public Verkko(int[][] g) {
         nGrid = new Vertex[50][50];
+        grid = g;
 //        adjList = new HashMap<>();
         list = new Array(2500);
         for (int i = 0; i < 2500; i++) {
@@ -26,7 +27,17 @@ public class Verkko {
         edges = new Array(4 * (50 - 2) * (50 - 2) + 3 * (50 - 2) * 4 + 2 * 4);
         vertexes = new Array(2500); //ei ehkä tarvita
 
-        grid = g;
+    }
+
+    public void resetGrid() {
+        s = null;
+        u = null;
+        for (int i = 0; i < 50; i++) {
+            for (int j = 0; j < 50; j++) {
+                grid[i][j] = 0;
+            }
+        }
+//        initGraph();
     }
 
     public Verkko(Array<Edge> e, Array<Vertex> v) {
