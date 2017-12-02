@@ -8,7 +8,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import reittitemp.Vertex;
 
-public class NodeTest {
+public class VertexTest {
 
     private Vertex n1;
     private Vertex n2;

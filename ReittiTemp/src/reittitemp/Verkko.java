@@ -88,7 +88,7 @@ public class Verkko {
             }
         }
         connectNodes();
-        System.out.println("count: " + count);
+//        System.out.println("count: " + count);
     }
 
     public void connectNodes() {
@@ -125,7 +125,7 @@ public class Verkko {
                 }
             }
         }
-        System.out.println("e: " + e);
+//        System.out.println("e: " + e);
     }
 
     public void addEdge(Vertex v, Vertex w) {

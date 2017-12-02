@@ -5,9 +5,22 @@ public class Heap {
     //pinon toteutus ainakin Dijkstran algoritmia varten
     private Vertex[] nodes;
     private int nCount;
+    private int size;
 
     public Heap() {
         nodes = new Vertex[2500];
+        nCount = 0;
+        size = 2500;
+    }
+
+    public Heap(int i) {
+        if (i > 0) {
+            nodes = new Vertex[i];
+            size = i;
+        } else {
+            nodes = new Vertex[2500];
+            size = 2500;
+        }
         nCount = 0;
     }
 
@@ -15,8 +28,19 @@ public class Heap {
         return nCount;
     }
 
+    public int getSize() {
+        return size;
+    }
+
     public Vertex[] getNodes() {
         return nodes;
+    }
+
+    public Vertex getNodeFrom(int i) {
+        if (i < nCount) {
+            return nodes[i];
+        }
+        return null;
     }
 
     //tää jää looppiin?
@@ -70,25 +94,16 @@ public class Heap {
     }
 
     public Vertex delMin() {
-        Vertex n = nodes[0];
+        Vertex n;
         if (nCount > 0) {
+            n = nodes[0];
+            nodes[0] = nodes[nCount - 1];
             nCount--;
+            heapify(0);
+        } else {
+            n = null;
         }
-//        System.out.println("nCount: " + nCount);
-//        System.out.println("nodes.len: " + nodes.length);
-        int a = 0;
-        for (Vertex i : nodes) {
-            if (i == null) {
-                break;
-            }
-            a++;
 
-        }
-//        System.out.println("a: " + a);
-//        System.out.println("ncount: " + nCount);
-        nodes[0] = nodes[nCount];
-        heapify(0);
-//        System.out.println(n.id() + ".w:" + n.getDist());
         return n;
     }
 
