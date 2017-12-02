@@ -12,17 +12,8 @@ targetCompatibility = '1.8'
 //
 // Note however, that you may define your own "run" and "debug" task if you
 // prefer. In this case NetBeans will not add these tasks but you may rely on
-// your own implementation.
-if (!hasProperty('mainClass')) {
-    ext.mainClass = 'labyrinth.Labyrinth'
-}
+// your own implementation
 
-repositories {
-    mavenCentral()
-    // You may define additional repositories, or even remove "mavenCentral()".
-    // Read more about repositories here:
-    //   http://www.gradle.org/docs/current/userguide/dependency_management.html#sec:repositories
-}
 
 dependencies {
     // TODO: Add dependencies here ...
