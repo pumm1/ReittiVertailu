@@ -13,6 +13,7 @@ public class Queue<T> {
         head = 0;
         tail = 0;
         n = size;
+        System.out.println("ii");
     }
 
     public void enqueue(T t) {
