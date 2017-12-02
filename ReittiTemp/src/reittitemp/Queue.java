@@ -7,6 +7,7 @@ public class Queue<T> {
     int tail;
     int n;
 
+    @SuppressWarnings({"unchecked"})
     public Queue(int size) {
         table = (T[]) new Object[size];
         head = 0;

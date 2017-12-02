@@ -7,7 +7,7 @@ public class Graph {
 
     private int[][] grid; //mallinnettan verkolle ruudukon sisältö
     private Vertex[][] nGrid; //mallinnetaan myös nodeverkko
-    private HashMap<Vertex, Vertex> tree; //tree-rakennelma alustavasti Javan hashmapilla, myöhemmin oma toteutus
+//    private HashMap<Vertex, Vertex> tree; //tree-rakennelma alustavasti Javan hashmapilla, myöhemmin oma toteutus
     private Queue<Vertex> queue;
     private Vertex u;
     private Vertex s;
@@ -15,7 +15,7 @@ public class Graph {
     public Graph(int[][] g) {
         grid = g;
         nGrid = new Vertex[50][50]; //aletetaan alkuun ainakin ruudukko kokoon 50x50
-        queue = new Queue(2500);
+        queue = new Queue<>(2500);
     }
 
     public Vertex getS() {
@@ -108,39 +108,39 @@ public class Graph {
 
     //leveyssuuntainen läpikäynti
     //treen toteutus pitää korvata omalla systeemillä vielä
-    public HashMap<Vertex, Vertex> BFS(Vertex s) {
-        tree = new HashMap<>();
-        for (int i = 0; i < 50; i++) {
-            for (int j = 0; j < 50; j++) {
-                if (nGrid[i][j] != null) {
-                    nGrid[i][j].reset();
-                    tree.put(nGrid[i][j], null);
-                }
-
-            }
-        }
-        s.start(); //color[s] = black, dist[s] = 0
-        queue.enqueue(s);
-        Vertex u = null;
-        Vertex[] neighbours = null;
-//        List<Node> neighbours = null;
-        while (!queue.isEmpty()) {
-            u = queue.dequeue();
-            neighbours = u.getNeighbours();
-//            System.out.println("");
-            for (Vertex v : neighbours) {
-                if (v != null) {
-                    if (v.getColor() == 0) {
-                        v.visit(); //color =  black
-                        v.incDist(s.getDist()); //dist[v] = dist[u] + 1
-                        tree.put(v, u);
-                        queue.enqueue(v);
-                    }
-                }
-            }
-        }
-        return tree;
-    }
+//    public HashMap<Vertex, Vertex> BFS(Vertex s) {
+////        tree = new HashMap<>();
+//        for (int i = 0; i < 50; i++) {
+//            for (int j = 0; j < 50; j++) {
+//                if (nGrid[i][j] != null) {
+//                    nGrid[i][j].reset();
+////                    tree.put(nGrid[i][j], null);
+//                }
+//
+//            }
+//        }
+//        s.start(); //color[s] = black, dist[s] = 0
+//        queue.enqueue(s);
+//        Vertex u = null;
+//        Vertex[] neighbours = null;
+////        List<Node> neighbours = null;
+//        while (!queue.isEmpty()) {
+//            u = queue.dequeue();
+//            neighbours = u.getNeighbours();
+////            System.out.println("");
+//            for (Vertex v : neighbours) {
+//                if (v != null) {
+//                    if (v.getColor() == 0) {
+//                        v.visit(); //color =  black
+//                        v.incDist(s.getDist()); //dist[v] = dist[u] + 1
+////                        tree.put(v, u);
+//                        queue.enqueue(v);
+//                    }
+//                }
+//            }
+//        }
+//        return tree;
+//    }
 
     //ilmeisesti java näkeekin koordinaatiston (Y,X) eikä (X,Y)
     public void printGraph() {

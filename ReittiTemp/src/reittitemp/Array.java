@@ -7,6 +7,7 @@ public class Array<T> {
     private int max;
     private T type = null;
 
+    @SuppressWarnings({"unchecked"})
     public Array(int s) {
         list = (T[]) new Object[s];
         count = 0;

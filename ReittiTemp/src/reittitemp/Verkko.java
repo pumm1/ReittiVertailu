@@ -19,13 +19,13 @@ public class Verkko {
         nGrid = new Vertex[50][50];
         grid = g;
 //        adjList = new HashMap<>();
-        list = new Array(2500);
+        list = new Array<Array<Vertex>>(2500);
         for (int i = 0; i < 2500; i++) {
-            Array<Vertex> a = new Array(4);
+            Array<Vertex> a = new Array<>(4);
             list.add(a);
         }
-        edges = new Array(4 * (50 - 2) * (50 - 2) + 3 * (50 - 2) * 4 + 2 * 4);
-        vertexes = new Array(2500); //ei ehkä tarvita
+        edges = new Array<>(4 * (50 - 2) * (50 - 2) + 3 * (50 - 2) * 4 + 2 * 4);
+        vertexes = new Array<>(2500); //ei ehkä tarvita
 
     }
 
@@ -72,7 +72,7 @@ public class Verkko {
                     nGrid[i][j] = null;
                 } else {
                     Array<Vertex> a = list.get(id);
-                    a = new Array(4);
+                    a = new Array<>(4);
                     count++;
                     nGrid[i][j] = new Vertex(id, i, j);
                     vertexes.add(nGrid[i][j]);
@@ -94,7 +94,7 @@ public class Verkko {
     public void connectNodes() {
         int e = 0;
         Edge ed;
-        edges = new Array(4 * (50 - 2) * (50 - 2) + 3 * (50 - 2) * 4 + 2 * 4);
+        edges = new Array<>(4 * (50 - 2) * (50 - 2) + 3 * (50 - 2) * 4 + 2 * 4);
         for (int i = 0; i < 50; i++) {
             for (int j = 0; j < 50; j++) {
                 if (nGrid[i][j] != null) {
