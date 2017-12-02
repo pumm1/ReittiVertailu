@@ -1,5 +1,5 @@
 
-package reittivertailu;
+
 
 import java.util.Random;
 import ui.Kayttoliittyma;
