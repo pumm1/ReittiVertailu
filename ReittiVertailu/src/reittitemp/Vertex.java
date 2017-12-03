@@ -69,22 +69,25 @@ public class Vertex {
         distance = d;
     }
 
-    public void relax(Vertex v) {
+    public int relax(Vertex v) {
+        int ret = -1;
         for (int i = 0; i < 4; i++) {
             if (neighbours[i] == v) {
                 if (v != null) {
                     if (v.getDist() > distance + 1) {
+                        ret = v.getDist();
                         v.setDist(distance + 1);
 //                        System.out.println(id + " distance to " + n.id() + ": " + distance);
-                        System.out.println(v.id + " distance changed in relax to " + id + ", new dist: " + distance + 1);
+                        System.out.println("(" + v.getY() +", " + v.getX() +  ") distance changed in relax to (" + y + ", " + x + "), new dist: " + (distance + 1));
 //                        n.setPrev(this);
-                        System.out.println(v.id() + " prev: " + id());
+//                        System.out.println(v.id() + " prev: " + id());
                         v.setPrev(this);
                     }
                 }
                 break;
             }
         }
+        return ret;
     }
 
     public int getColor() {

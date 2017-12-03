@@ -68,6 +68,7 @@ public class Verkko {
     public void initGraph() {
         int id = 0;
         int count = 0;
+        vertexes = new Array(2500);
         for (int i = 0; i < 50; i++) {
             for (int j = 0; j < 50; j++) {
                 if (grid[i][j] == 1) {

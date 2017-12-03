@@ -5,11 +5,10 @@ import java.util.*;
 public class Dijkstra implements Algorithm {
 
     /*
-    TÄMÄ EI TOIMI VIELÄ YHTÄÄN LUOTETTAVASTI - EN OLE SAANUT KORJATTUA ONGLEMIA
-    -Algoritmi löytää reitin nyt, kun vihreä ruutu on punaisesta katsottuna vasemmalla ylhäällä/lähes suoraan ylhäällä, 
-    välillä liian suuri etäisyys voi myös vaikuttaa, kuten myös suurempi määrä esteitä
+    SE TOIMIIIIIIIIIIIIII!!!!!!!!!!!!!!!!!!!! (tosin ei ihan 100% kuten oikea dijkstra
+    -decKey ei ole sellainen kuin alkuperäisessä ja taitaa olla himpun verran vaativampi aikavaatimukseltaan
+    -tämä johtuu vaan muun koodin rakenteesta
      */
-//    private Graph graph;
     private Heap heap;
     private Verkko verkko;
     private Array<Vertex> nodes;
@@ -53,10 +52,12 @@ public class Dijkstra implements Algorithm {
         }
         s.setDist(0);
         s.start();
+        System.out.println("s coordinates: " + s.getY() + ", " + s.getX());
     }
 
     @Override
     public void findRoute(Vertex s) {
+        System.out.println("DIJKSTRA STARTING");
         nodes = verkko.getVertexes();
         System.out.println("alkaa");
         init(s);
@@ -66,32 +67,17 @@ public class Dijkstra implements Algorithm {
         Vertex u = null;
         System.out.println("heapSize:" + nCount);
         while (!heap.isEmpty()) {
-
             u = heap.delMin();
-//            System.out.println("u.getDist: " + u.getDist());
+            System.out.println("u (x,y) - dist: " + u.getY() + ", " + u.getX() + " - " + u.getDist());
             Vertex[] adj = u.getNeighbours();
-            System.out.println("----");
-            System.out.println("u: " + u.id());
             for (Vertex v : adj) {
-//                int dist = v.getDist();
                 if (v != null) {
-                    System.out.println("v: " + v.id());
-                    u.relax(v);
-                    heap.dec(v);
-                }else{
-                    break;
+//                    System.out.println("v: " + v.id());
+                    int t = u.relax(v);
+                    heap.decKey(v);
                 }
-//                int i = 0;
-//                    if (nodes[i] == u) {
-//                        break;
-//                    }
-//                    i++;
-//                }
-//                heap.heapify(heap.parent(i));
 
             }
-//            nCount = heap.getCount();
-//            System.out.println("heapSize:" + nCount);
         }
         System.out.println("done");
     }

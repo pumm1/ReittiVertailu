@@ -1,4 +1,3 @@
-
 package reittitemp;
 
 public class Heap {
@@ -43,13 +42,26 @@ public class Heap {
         }
         return null;
     }
+    
+    public void moveUp(int i){
+        if(nodes[parent(i)].getDist() > nodes[i].getDist()){
+            swap(parent(i), i);
+            moveUp(parent(i));
+        }
+    }
+
+    public void decKey(Vertex v) {
+        moveUp(v.getIndex());
+        heapify(v.getIndex());
+//        insertNode(v);
+    }
 
     //tää jää looppiin?
     public void heapify(int i) {
         int smallest;
         int l = left(i);
         int r = right(i);
-        if (r <= nCount) {
+        if (r < nCount) {
             if (nodes[l].getDist() < nodes[r].getDist()) {
                 smallest = l;
             } else {
@@ -59,7 +71,7 @@ public class Heap {
                 swap(i, smallest);
                 heapify(smallest);
             }
-        } else if (l == nCount && nodes[i].getDist() > nodes[l].getDist()) {
+        } else if (l == nCount - 1 && nodes[i].getDist() > nodes[l].getDist()) {
             swap(i, l);
         }
     }
@@ -106,18 +118,6 @@ public class Heap {
         }
 
         return n;
-    }
-
-    public void dec(Vertex v) {
-//        int i = 0;
-//        while(i < 2500){
-//            if(nodes[i] == v){
-//                heapify(i);
-//                break;
-//            }
-//            i++;
-//        }
-        heapify(v.getIndex());
     }
 
     public int parent(int i) {

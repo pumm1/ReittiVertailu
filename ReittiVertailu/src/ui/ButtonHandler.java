@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashMap;
 import reittitemp.Algorithm;
+import reittitemp.Array;
 //import reittitemp.Graph;
 import reittitemp.Vertex;
 import reittitemp.Verkko;
@@ -43,10 +44,12 @@ public class ButtonHandler implements ActionListener {
 //                System.out.println("drawing route");
                 algorithm.findRoute(s);
                 Vertex u = verkko.getU();
+                System.out.println("u.dist: " + u.getDist());
+                
 //                u = tree.get(u);
                 u = u.getPrev();
                 if (u != null) {
-                    System.out.println("u not null");
+                    System.out.println("u not null, " + " u dist: " + u.getDist());
                 }
 //                graph.printGraph();
                 ui.drawRoute(s, u);
