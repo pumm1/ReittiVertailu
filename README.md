@@ -1,5 +1,6 @@
 ﻿# ReittiVertailu
 
+[![Build Status](https://travis-ci.org/pumm1/ReittiVertailu.svg?branch=master)](https://travis-ci.org/pumm1/ReittiVertailu)
 
 Työn ideana on tehdä ohjelma, missä käyttäjä voi asettaa ruudukkoon erilaisia 
 palikoita (esteitä, aloitus- ja lopetusruudun) ja katsoa millaisen reitin
