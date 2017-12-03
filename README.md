@@ -10,7 +10,7 @@ erilaiset reittialgoritmit löytävät. Työ toteutetaan Javalla.
 [Määrittelydokumentti](Dokumentaatio/Maarittelydokumentti.md)
 [Aiheenmäärittely](Dokumentaatio/Aiheenmaarittely.md)
 [Toteutusdokumentti](Dokumentaatio/Toteutusdokumentti.pdf)
-[Testausdokumentti](Dokumentaatio/Testausdokumentti.md)
+[Testausdokumentti](Dokumentaatio/Testausdokumentti.pdf)
 [Käyttöohje](Dokumentaatio/ohje.md)
 
 
