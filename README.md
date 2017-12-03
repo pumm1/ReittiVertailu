@@ -9,7 +9,7 @@ erilaiset reittialgoritmit löytävät. Työ toteutetaan Javalla.
 ### Dokumentaatiota näppärästi etusivulta
 [Määrittelydokumentti](Dokumentaatio/Maarittelydokumentti.md)
 [Aiheenmäärittely](Dokumentaatio/Aiheenmaarittely.md)
-[Toteutusdokumentti](Dokumentaatio/Toteutusdokumentti.md)
+[Toteutusdokumentti](Dokumentaatio/Toteutusdokumentti.pdf)
 [Testausdokumentti](Dokumentaatio/Testausdokumentti.md)
 [Käyttöohje](Dokumentaatio/ohje.md)
 

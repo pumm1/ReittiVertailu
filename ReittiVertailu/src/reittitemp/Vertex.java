@@ -78,7 +78,6 @@ public class Vertex {
                         ret = v.getDist();
                         v.setDist(distance + 1);
 //                        System.out.println(id + " distance to " + n.id() + ": " + distance);
-                        System.out.println("(" + v.getY() +", " + v.getX() +  ") distance changed in relax to (" + y + ", " + x + "), new dist: " + (distance + 1));
 //                        n.setPrev(this);
 //                        System.out.println(v.id() + " prev: " + id());
                         v.setPrev(this);

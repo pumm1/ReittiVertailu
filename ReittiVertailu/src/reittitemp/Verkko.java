@@ -12,7 +12,7 @@ public class Verkko {
     private Vertex[][] nGrid;
     private Vertex s;
     private Vertex u;
-    private Array<Edge> edges;
+//    private Array<Edge> edges;
     private Array<Vertex> vertexes;
 
     public Verkko(int[][] g) {
@@ -24,7 +24,7 @@ public class Verkko {
             Array<Vertex> a = new Array<>(4);
             list.add(a);
         }
-        edges = new Array<>(4 * (50 - 2) * (50 - 2) + 3 * (50 - 2) * 4 + 2 * 4);
+//        edges = new Array<>(4 * (50 - 2) * (50 - 2) + 3 * (50 - 2) * 4 + 2 * 4);
         vertexes = new Array<>(2500); //ei ehkä tarvita
 
     }
@@ -46,16 +46,16 @@ public class Verkko {
 
     public Verkko(Array<Edge> e, Array<Vertex> v) {
         vertexes = v;
-        edges = e;
+//        edges = e;
     }
 
     public Array<Vertex> getVertexes() {
         return vertexes;
     }
 
-    public Array<Edge> getEdges() {
-        return edges;
-    }
+//    public Array<Edge> getEdges() {
+//        return edges;
+//    }
 
 //    public Vertex[][] getNodeGrid() {
 //        return nGrid;
@@ -99,7 +99,7 @@ public class Verkko {
     public void connectNodes() {
         int e = 0;
         Edge ed;
-        edges = new Array<>(4 * (50 - 2) * (50 - 2) + 3 * (50 - 2) * 4 + 2 * 4);
+//        edges = new Array<>(4 * (50 - 2) * (50 - 2) + 3 * (50 - 2) * 4 + 2 * 4);
         for (int i = 0; i < 50; i++) {
             for (int j = 0; j < 50; j++) {
                 if (nGrid[i][j] != null) {

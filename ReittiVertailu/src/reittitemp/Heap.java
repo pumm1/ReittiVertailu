@@ -52,7 +52,7 @@ public class Heap {
 
     public void decKey(Vertex v) {
         moveUp(v.getIndex());
-        heapify(v.getIndex());
+//        heapify(v.getIndex());
 //        insertNode(v);
     }
 
