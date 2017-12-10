@@ -50,8 +50,8 @@ public class Kayttoliittyma extends JFrame implements KeyListener {
         super("ReittiVertailu");
         konsoli = new JTextArea();
         konsoli.setSize(800, 50);
-        txt = "iii";
-        konsoli.setText(txt);
+        txt = "";
+        konsoliWrite(txt);
         grid = g;
         alg = 0;
         JPanel panel = new JPanel(new GridLayout(50, 50));
@@ -97,6 +97,14 @@ public class Kayttoliittyma extends JFrame implements KeyListener {
 
         gridHandler.resetGrid();
     }
+    
+    /**
+     *@param t konsolin teksti
+     */
+    public void konsoliWrite(String t){
+        txt = t;
+        konsoli.setText(txt);
+    }
 
     /**
      *@param s start
@@ -105,8 +113,7 @@ public class Kayttoliittyma extends JFrame implements KeyListener {
      */
     public void drawRoute(Vertex s, Vertex u, long aika) {
         String algo = returnAlgorithm();
-        txt = "reitti haettu algoritmilla " + algo + " ja aikaa meni: "  + aika + " ms";
-        konsoli.setText(txt);
+        konsoliWrite(algo + " - aikaa meni: "  + aika + " ms (reittiä ei ole, jos keltaista ei näy)");
         if (u != null) {
             squares[u.getX()][u.getY()].setBackground(Color.yellow);
         }
@@ -135,9 +142,8 @@ public class Kayttoliittyma extends JFrame implements KeyListener {
 
     public void setAlgorithm() {
         String algo = returnAlgorithm();
-        txt = "käytössä oleva algoritmi: " + algo;
-        konsoli.setText(txt);
-        System.out.println("käytössä oleva algoritmi: " + algo);
+        konsoliWrite("käytössä oleva algoritmi: " + algo);
+       
     }
 
     @Override
@@ -155,9 +161,7 @@ public class Kayttoliittyma extends JFrame implements KeyListener {
         } else if (k.getKeyCode() == KeyEvent.VK_R) {
             verkko.resetGrid();
             processGrid();
-            txt = "reset!";
-            konsoli.setText(txt);
-            System.out.println("reset!");
+            konsoliWrite("reset!");
         }
     }
 
