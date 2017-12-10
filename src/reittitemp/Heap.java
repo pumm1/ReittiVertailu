@@ -2,7 +2,12 @@ package reittitemp;
 
 public class Heap {
 
-    //pinon toteutus ainakin Dijkstran algoritmia varten
+    /**
+     * pinon toteutus ainakin Dijkstran algoritmia varten
+     *@param nodes nodelista
+     *@param nCount nodejen määrä
+     *@param size pinon koko
+     */
     private Vertex[] nodes;
     private int nCount;
     private int size;
@@ -43,6 +48,10 @@ public class Heap {
         return null;
     }
     
+    /**
+    *liikuta node ylemmäs pinossa
+    *@param i indeksi
+    */
     public void moveUp(int i){
         if(nodes[parent(i)].getDist() > nodes[i].getDist()){
             swap(parent(i), i);
@@ -50,13 +59,17 @@ public class Heap {
         }
     }
 
+    /**
+     *Dijkstran algoritmin decKey-kohdan tunnistaminen helpompaa
+     *@param v node, jolle toteutetaan
+     */
     public void decKey(Vertex v) {
         moveUp(v.getIndex());
-//        heapify(v.getIndex());
-//        insertNode(v);
     }
 
-    //tää jää looppiin?
+    /**
+    *@param i indeksi
+    */
     public void heapify(int i) {
         int smallest;
         int l = left(i);
@@ -76,6 +89,10 @@ public class Heap {
         }
     }
 
+    /**
+     *@param i indeksi
+     *@param j toinen indeksi
+     */
     public void swap(int i, int j) {
         nodes[i].setIndex(j);
         nodes[j].setIndex(i);
@@ -84,6 +101,10 @@ public class Heap {
         nodes[j] = a;
     }
 
+    
+    /**
+     *@param n node, joka lisätään
+     */
     public void insertNode(Vertex n) {
         int i = nCount;
         nCount++;

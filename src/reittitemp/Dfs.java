@@ -2,9 +2,16 @@
 package reittitemp;
 public class Dfs implements Algorithm { //edes jotain, jonka toteuttaminen ei tuottanut ongelmia
 
+    /**
+     *@param verkko 
+     *@param nGrid verkon nodejen matriisiesitys
+     */
     private Verkko verkko;
     private Vertex[][] nGrid;
-
+    
+    /**
+    *@param v verkon parametri
+    */
     public Dfs(Verkko v) {
         verkko = v;
         nGrid = verkko.getNodeGrid();
@@ -20,7 +27,10 @@ public class Dfs implements Algorithm { //edes jotain, jonka toteuttaminen ei tu
         }
         DFSvisit(s);
     }
-
+    
+    /**
+     *@param u node, mitä tutkitaan
+     */
     public void DFSvisit(Vertex u) {
         u.visit();
         Vertex[] neighbours = u.getNeighbours();
@@ -35,6 +45,9 @@ public class Dfs implements Algorithm { //edes jotain, jonka toteuttaminen ei tu
 
     }
 
+    /**
+    *@param s aloitusnode haulle
+    */
     @Override
     public void findRoute(Vertex s) {
         DFS(s);

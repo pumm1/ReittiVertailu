@@ -1,15 +1,15 @@
-
 package ui;
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.GridLayout;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.util.HashMap;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 import javax.swing.WindowConstants;
 import reittitemp.Bfs;
 import reittitemp.Dfs;
@@ -20,17 +20,38 @@ import reittitemp.Verkko;
 
 public class Kayttoliittyma extends JFrame implements KeyListener {
 
+    /**
+     *Käyttöliittymä hoitaa ohjelman visuaalisen puolen
+     * @param squares verkon solmut nappeina
+     * @param contents käyttöliittymän kontentit
+     * @param gridHandler hoitaa ruudukon logiikan
+     * @param grid verkon matriisiesitys, koska kyseessä on visuaalisesti ruudukko
+     * @param alg kuvastaa käytettyä algoritmia numeraalisesti
+     * @param bHandler hoitaa find route-napin logiikan
+     * @param verkko on itse verkko, missä reittihaku tehdään
+     * @param konsoli on käyttöliittymän teksti-ikkuna
+     * @param txt konsolin teksti
+     *
+     */
     private JButton[][] squares;
     private Container contents;
     private GridHandler gridHandler;
     private int[][] grid;
-    private HashMap<Vertex, Vertex> tree;
     private int alg;
     private ButtonHandler bHandler;
     private Verkko verkko;
+    private JTextArea konsoli;
+    private String txt;
 
+    /**
+     *@param g gridin parametri
+     */
     public Kayttoliittyma(int[][] g) {
         super("ReittiVertailu");
+        konsoli = new JTextArea();
+        konsoli.setSize(800, 50);
+        txt = "iii";
+        konsoli.setText(txt);
         grid = g;
         alg = 0;
         JPanel panel = new JPanel(new GridLayout(50, 50));
@@ -62,8 +83,8 @@ public class Kayttoliittyma extends JFrame implements KeyListener {
         bHandler = new ButtonHandler(verkko, this);
         setAlgorithm();
         button.addActionListener(bHandler);
-        contents.add(button, BorderLayout.SOUTH);
-
+        contents.add(button, BorderLayout.NORTH);
+        contents.add(konsoli, BorderLayout.SOUTH);
         setSize(800, 800);
         setResizable(false);
         setLocationRelativeTo(null);
@@ -77,8 +98,15 @@ public class Kayttoliittyma extends JFrame implements KeyListener {
         gridHandler.resetGrid();
     }
 
-    public void drawRoute(Vertex s, Vertex u) {
-
+    /**
+     *@param s start
+     *@param u loppunode
+     *@param aika käytetty aika
+     */
+    public void drawRoute(Vertex s, Vertex u, long aika) {
+        String algo = returnAlgorithm();
+        txt = "reitti haettu algoritmilla " + algo + " ja aikaa meni: "  + aika + " ms";
+        konsoli.setText(txt);
         if (u != null) {
             squares[u.getX()][u.getY()].setBackground(Color.yellow);
         }
@@ -89,8 +117,8 @@ public class Kayttoliittyma extends JFrame implements KeyListener {
             u = u.getPrev();
         }
     }
-
-    public void setAlgorithm() {
+    
+    private String returnAlgorithm(){
         String algo = "";
         if (alg == 0) {
             bHandler.setAlgorithm(new Bfs(verkko));
@@ -102,13 +130,23 @@ public class Kayttoliittyma extends JFrame implements KeyListener {
             bHandler.setAlgorithm(new Dijkstra(verkko));
             algo = "dijkstra";
         }
+        return algo;
+    }
+
+    public void setAlgorithm() {
+        String algo = returnAlgorithm();
+        txt = "käytössä oleva algoritmi: " + algo;
+        konsoli.setText(txt);
         System.out.println("käytössä oleva algoritmi: " + algo);
     }
 
     @Override
     public void keyTyped(KeyEvent ke) {
     }
-
+    
+    /**
+     *@param k keyEventin parametri
+     */
     @Override
     public void keyPressed(KeyEvent k) {
         if (k.getKeyCode() == KeyEvent.VK_A) {
@@ -117,6 +155,8 @@ public class Kayttoliittyma extends JFrame implements KeyListener {
         } else if (k.getKeyCode() == KeyEvent.VK_R) {
             verkko.resetGrid();
             processGrid();
+            txt = "reset!";
+            konsoli.setText(txt);
             System.out.println("reset!");
         }
     }

@@ -3,24 +3,32 @@ package reittitemp;
 
 public class Queue<T> {
 
+    /**
+     *@param table jonon taulu
+     *@param head jonon pää
+     *@param tail jonon häntä
+     *@param size jonon max koko
+     */
     T[] table;
     int head;
     int tail;
-    int n;
+    int size;
 
     @SuppressWarnings({"unchecked"})
     public Queue(int size) {
         table = (T[]) new Object[size];
         head = 0;
         tail = 0;
-        n = size;
-//        System.out.println("ii");
+        this.size = size;
     }
 
+    /**
+     *@param t 
+     */
     public void enqueue(T t) {
         table[tail] = t;
         tail++;
-        if (tail == n) {
+        if (tail == size) {
             tail = 0;
         }
     }
@@ -44,7 +52,7 @@ public class Queue<T> {
         T ret = table[head];
         table[head] = null;
         head++;
-        if (head == n) {
+        if (head == size) {
             head = 0;
         }
         return ret;

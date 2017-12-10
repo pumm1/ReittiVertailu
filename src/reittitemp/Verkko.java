@@ -1,20 +1,27 @@
-
 package reittitemp;
+
 import java.util.*;
 
 public class Verkko {
 
-    /*
-    alustava korvike Graph-luokalle, sisällöltään vähän sekavahko nyt, kun koittanut sovitella Edgeä käyttöön myös
+    /**
+     *@param list vieruslista
+     *@param grid matriisiesitys verkon ruudukon arvoille
+     *@param nGrid nodejen matriisiesitys
+     *@param s aloitus
+     *@param u node, josta haetaan reitti s:ään
+     *@param vertexes nodet taulussa
      */
-    private Array<Array<Vertex>> list; //vieruslistan toteutus
+    private Array<Array<Vertex>> list;
     private int[][] grid;
     private Vertex[][] nGrid;
     private Vertex s;
     private Vertex u;
-//    private Array<Edge> edges;
     private Array<Vertex> vertexes;
 
+    /**
+     *@param g gridin arvo
+     */
     public Verkko(int[][] g) {
         nGrid = new Vertex[50][50];
         grid = g;
@@ -39,32 +46,23 @@ public class Verkko {
         }
 //        initGraph();
     }
-    
-    public Vertex[][] getNodeGrid(){
+
+    public Vertex[][] getNodeGrid() {
         return nGrid;
     }
 
-    public Verkko(Array<Edge> e, Array<Vertex> v) {
-        vertexes = v;
-//        edges = e;
-    }
 
     public Array<Vertex> getVertexes() {
         return vertexes;
     }
 
-//    public Array<Edge> getEdges() {
-//        return edges;
-//    }
-
-//    public Vertex[][] getNodeGrid() {
-//        return nGrid;
-//    }
-
     public Array<Array<Vertex>> getNodes() {
         return list;
     }
 
+    /**
+     *alusta verkko
+     */
     public void initGraph() {
         int id = 0;
         int count = 0;
@@ -83,68 +81,65 @@ public class Verkko {
                     vertexes.add(nGrid[i][j]);
                     if (grid[i][j] == 2) {
                         u = nGrid[i][j];
-                        System.out.println("u updated");
                     } else if (grid[i][j] == 3) {
                         s = nGrid[i][j];
-                        System.out.println("s updated");
                     }
                 }
                 id++;
             }
         }
         connectNodes();
-//        System.out.println("count: " + count);
     }
 
+    /**
+     *yhdistä nodet verkossa toisiinsa
+     */
     public void connectNodes() {
-        int e = 0;
-        Edge ed;
-//        edges = new Array<>(4 * (50 - 2) * (50 - 2) + 3 * (50 - 2) * 4 + 2 * 4);
         for (int i = 0; i < 50; i++) {
             for (int j = 0; j < 50; j++) {
                 if (nGrid[i][j] != null) {
                     if (i + 1 < 50) {
                         if (nGrid[i + 1][j] != null) {
-
                             addEdge(nGrid[i][j], nGrid[i + 1][j]);
                         }
                     }
                     if (i - 1 >= 0) {
                         if (nGrid[i - 1][j] != null) {
-
                             addEdge(nGrid[i][j], nGrid[i - 1][j]);
                         }
                     }
                     if (j + 1 < 50) {
                         if (nGrid[i][j + 1] != null) {
-
                             addEdge(nGrid[i][j], nGrid[i][j + 1]);
                         }
                     }
                     if (j - 1 >= 0) {
                         if (nGrid[i][j - 1] != null) {
-
                             addEdge(nGrid[i][j], nGrid[i][j - 1]);
                         }
                     }
                 }
             }
         }
-//        System.out.println("e: " + e);
     }
 
+    /**
+     *@param v yhdistetään alempaan
+     *@param w yhdistetään ylempään
+     */
     public void addEdge(Vertex v, Vertex w) {
-
         list.get(v.id()).add(w);
         list.get(w.id()).add(v);
         v.connect(w);
-//        System.out.println("added " + v.getId() + " and " + w.getId());
 
     }
 
-    public Array<Vertex> getNeighbours(int v) {
-        if (v < 2500) {
-            return list.get(v);
+    /**
+     *@param i indeksi
+     */
+    public Array<Vertex> getNeighbours(int i) {
+        if (i < 2500) {
+            return list.get(i);
         }
         return null;
     }
@@ -157,13 +152,17 @@ public class Verkko {
         return u;
     }
 
+    /**
+     *@param i node u:n uusi node
+     */
     public void updateU(Vertex i) {
         u = i;
     }
-
+    /**
+     *@param i node s:n uusi ndoe
+     */
     public void updateS(Vertex i) {
         s = i;
     }
 
-   
 }

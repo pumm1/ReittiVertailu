@@ -3,6 +3,17 @@ package reittitemp;
 
 public class Vertex {
 
+    /**
+     *@param id noden id
+     *@param x x-koordinaatti
+     *@param y y-koordinaatti
+     *@param neighbours naapurit
+     *@param nodes määrä nodeja naapureissa 
+     *@param color viestii onko node tutkittu
+     *@param distance etäisyys s:stä
+     *@param prev edellinen node
+     *@param index indeksi
+     */
     protected int id;
     protected int x;
     protected int y;
@@ -11,15 +22,17 @@ public class Vertex {
     protected int color; //0=ei tutkittu, 1 = tutkittu
     protected int distance;
     private Vertex prev; //mahdollinen ratkaisu hahsmapin korvaamiselle? ei ehkä toimi
-    private Vertex next;
     private int index;
 
+    
+    /**
+     *@param a x:n arvo
+     *@param b y:n arvo
+     */
     public Vertex(int a, int b) {
         id = 2;
         x = a;
         y = b;
-        //naapureita voi olla maksimissaan 4 ruudukossa (vertikaalinen ja horisontaalinen liike)
-//        neighbours = new Node[8]; //4
         neighbours = new Vertex[4];
         nodes = 0;
         color = 0;
@@ -27,6 +40,9 @@ public class Vertex {
         index = 0;
     }
 
+    /**
+     *@param i indeksi
+     */
     public void setIndex(int i) {
         index = i;
     }
@@ -35,6 +51,11 @@ public class Vertex {
         return index;
     }
 
+    /**
+     *@param i id
+     *@param a
+     *@param b
+     */
     public Vertex(int i, int a, int b) {
         id = i;
         x = a;
@@ -58,17 +79,15 @@ public class Vertex {
         return y;
     }
 
-    public void printNeighbours() {
-        for (Vertex i : neighbours) {
-            System.out.println("----");
-            System.out.println("(" + i.getX() + ", " + i.getY() + ")");
-        }
-    }
 
     public void setDist(int d) {
         distance = d;
     }
 
+    /**
+     *relaksaation toteutus Dijkstraa varten
+     *@param v node, johon verrataan
+     */
     public int relax(Vertex v) {
         int ret = -1;
         for (int i = 0; i < 4; i++) {
@@ -77,9 +96,6 @@ public class Vertex {
                     if (v.getDist() > distance + 1) {
                         ret = v.getDist();
                         v.setDist(distance + 1);
-//                        System.out.println(id + " distance to " + n.id() + ": " + distance);
-//                        n.setPrev(this);
-//                        System.out.println(v.id() + " prev: " + id());
                         v.setPrev(this);
                     }
                 }
@@ -93,7 +109,9 @@ public class Vertex {
         return color;
     }
 
-    //lisätään solmulle naapuri
+    /**
+     *@param n yhdistä node tähän
+     */
     public void connect(Vertex n) {
         int temp = 0;
         for (int i = 0; i < 4; i++) {
@@ -122,6 +140,10 @@ public class Vertex {
         visit();
     }
 
+    
+    /**
+     *@param i distancen uusi arvo tämän mukaan
+     */
     public void incDist(int i) {
         distance = i + 1;
     }
@@ -138,6 +160,9 @@ public class Vertex {
         return neighbours;
     }
 
+    /**
+     *@param i uusi prev
+     */
     public void setPrev(Vertex i) {
         prev = i;
     }

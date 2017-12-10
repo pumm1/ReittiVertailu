@@ -1,20 +1,30 @@
 
 package reittitemp;
 public class Array<T> {
-
+    
+    /**
+     *@param list tyypin T taulukko
+     *@param count taulukon olioiden lukumäärä
+     *@param max maksimikoko taululle
+     */
     private T[] list;
     private int count;
     private int max;
-    private T type = null;
 
+    /**
+     *@param size arrayn koko
+     */
     @SuppressWarnings({"unchecked"})
-    public Array(int s) {
-        list = (T[]) new Object[s];
+    public Array(int size) {
+        list = (T[]) new Object[size];
         count = 0;
-        max = s;
+        max = size;
 
     }
 
+    /**
+     *@param t tyypin T lisäys arrayhyn
+     */
     public void add(T t) {
         int temp = 0;
         for (int i = 0; i < max; i++) {
@@ -30,6 +40,9 @@ public class Array<T> {
         }
     }
 
+    /**
+     *@param i taulukon indeksi, mistä haetaan
+     */
     public T get(int i) {
         if (i < count && i >= 0) {
             return list[i];

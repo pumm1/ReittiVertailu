@@ -1,5 +1,5 @@
-
 package ui;
+
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -9,15 +9,28 @@ import reittitemp.Verkko;
 
 public class GridHandler implements ActionListener {
 
+    /**
+     *@param squares nappien ruudukko
+     *@param grid matriisiesitys ruudukon arvoille
+     *@param ui käyttöliittymä
+     *@param green noden u esitys
+     *@param red noden s esitys
+     *@param verkko
+     */
     private JButton[][] squares;
     private int[][] grid;
     private Kayttoliittyma ui;
     private int green;
     private int red;
-//    private Graph graph;
     private Verkko verkko;
 
-    public GridHandler(JButton[][] s, int[][] g, Kayttoliittyma k) { //tarvitaanko gridiä?
+    
+    /**
+     *@param s
+     *@param g
+     *@param k
+     */
+    public GridHandler(JButton[][] s, int[][] g, Kayttoliittyma k) { 
         squares = s;
         grid = g;
         ui = k;
@@ -25,8 +38,11 @@ public class GridHandler implements ActionListener {
         red = 0;
     }
 
-    /*
-    prosessoidaan ruudun klikkaus - tyhjä muuttuu esteeksi, este aloitukseksi (jos sellaista ei ole), aloitus lopetukseksi ja lopetus tyhjäksi. Päivitetään sitten verkko
+    /**
+     *prosessoidaan ruudun klikkaus - tyhjä muuttuu esteeksi, este aloitukseksi (jos sellaista ei ole), 
+     * aloitus lopetukseksi ja lopetus tyhjäksi. Päivitetään sitten verkko
+     *@param i 
+     *@param j
      */
     public void processGrid(int i, int j) {
         grid[i][j] = (grid[i][j] + 1) % 4;
@@ -68,20 +84,17 @@ public class GridHandler implements ActionListener {
         }
     }
 
-//    public Graph getGraph() {
-//        return graph;
-//    }
-
     public Verkko getVerkko() {
         return verkko;
     }
 
+    /**
+     *alustetaan verkko
+     */
     public void initGraph() {
         System.out.println("updating graph..");
         verkko = new Verkko(grid);
         verkko.initGraph();
-//        graph = new Graph(grid);
-//        graph.initGraph();
         for (int i = 0; i < 50; i++) {
             for (int j = 0; j < 50; j++) {
                 if (squares[i][j].getBackground() == Color.yellow) {
@@ -91,6 +104,9 @@ public class GridHandler implements ActionListener {
         }
     }
 
+    /**
+     *@param e
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         Object source = e.getSource();

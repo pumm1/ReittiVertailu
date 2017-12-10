@@ -2,19 +2,18 @@
 package reittitemp;
 public class Bfs implements Algorithm {
 
-//    private Graph graph;
+    /**
+     *@param verkko nimi kertonee kaiken
+     *@param queue nodejono
+     *@param nGrid matriisiesitys nodeille
+     */
     private Verkko verkko;
     private Queue<Vertex> queue;
-//    private HashMap<Vertex, Vertex> tree;//
     private Vertex[][] nGrid;
 
-//    public Bfs(Graph g) {
-//        graph = g;
-//        queue = new Queue<>(2500);
-//        nGrid = graph.getNodeGrid();
-//
-//    }
-
+    /**
+     *@param v verkon parametri
+     */
     public Bfs(Verkko v) {
         verkko = v;
         queue = new Queue<Vertex>(2500);
@@ -22,6 +21,9 @@ public class Bfs implements Algorithm {
         System.out.println(".......");
     }
     
+    /**
+     *@param s aloitusnode algoritmille 
+     */
     @Override
     public void findRoute(Vertex s) {
 //        tree = new HashMap<>();
