@@ -11,7 +11,7 @@ turhia rivejä ja kommentteja pois. Automatisoituja testejä on lisätty.
 Dokumentaatioon liittyvien asioiden toteuttamisesta.
 
 ## Miikä jäi epäselväksi tai on tuottanut vaikeuksia?
-En tiedä, miksi en saa Jacocon raportteja toimimaan ohjelmalleni gradlessa. Tämän takia en myöskään saa codecovia toimimaan projektilleni.
+En tiedä, miksi en saa Jacocon raportteja toimimaan ohjelmalleni gradlessa. Tämän takia en myöskään saa codecovia toimimaan projektilleni, enkä pysty tutkimaan testikattavuuden mahdollisia (ja hyvin todennäköisiä) puitteita.
 
 ## Mitä teen seuraavaksi
 Täydennän mahdollisesti testejä lisää ja panostan lisää dokumentaatioon.
