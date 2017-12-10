@@ -34,28 +34,32 @@ public class ButtonHandler implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        long alku = System.currentTimeMillis();
+        long loppu;
         verkko.initGraph();
-//        Object source = e.getSource();
         Vertex s = verkko.getS();
         if (verkko.getS() != null) {
-//            System.out.println("s not null..");
+
             if (verkko.getU() != null) {
-//                System.out.println("u not null..");
-//                System.out.println("drawing route");
+
                 algorithm.findRoute(s);
                 Vertex u = verkko.getU();
-//                System.out.println("u.dist: " + u.getDist());
-                
-//                u = tree.get(u);
+
                 u = u.getPrev();
                 if (u != null) {
-//                    System.out.println("u not null, " + " u dist: " + u.getDist());
                 }
-//                graph.printGraph();
                 ui.drawRoute(s, u);
+             loppu = System.currentTimeMillis();
+                System.out.println("aikaa meni: " + (loppu - alku) + " ms");
             }
         }
-        System.out.println("diu diu!");
+        
     }
+    /*
+    AIKOJA (ms):
+    BFS: 8, 5, 6, 5, 4, 11, 7, 5, 3, 3, 6, 3, 4, 6, 5
+    DFS: 5, 5, 6, 4, 4, 5, 5, 7, 2, 4, 5, 2, 3, 8, 8
+    Dijkstra: 11, 8, 10, 10, 9, 8, 6, 6, 11, 8, 3, 5
+    */
 
 }

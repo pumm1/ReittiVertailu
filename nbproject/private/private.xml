@@ -2,19 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/home/sagu/ReittiVertailu/ReittiVertailu/src/reittitemp/Queue.java</file>
-            <file>file:/home/sagu/ReittiVertailu/ReittiVertailu/test/reittitemp/HeapTest.java</file>
-            <file>file:/home/sagu/ReittiVertailu/ReittiVertailu/src/ui/Kayttoliittyma.java</file>
-            <file>file:/home/sagu/ReittiVertailu/ReittiVertailu/src/Main.java</file>
-            <file>file:/home/sagu/ReittiVertailu/ReittiVertailu/src/ui/ButtonHandler.java</file>
-            <file>file:/home/sagu/ReittiVertailu/ReittiVertailu/src/reittitemp/Array.java</file>
-            <file>file:/home/sagu/ReittiVertailu/ReittiVertailu/src/reittitemp/Heap.java</file>
-            <file>file:/home/sagu/ReittiVertailu/ReittiVertailu/src/reittitemp/Vertex.java</file>
-            <file>file:/home/sagu/ReittiVertailu/ReittiVertailu/src/reittitemp/Bfs.java</file>
-            <file>file:/home/sagu/ReittiVertailu/ReittiVertailu/src/reittitemp/Dfs.java</file>
-            <file>file:/home/sagu/ReittiVertailu/ReittiVertailu/src/reittitemp/Verkko.java</file>
-            <file>file:/home/sagu/ReittiVertailu/ReittiVertailu/src/reittitemp/Dijkstra.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

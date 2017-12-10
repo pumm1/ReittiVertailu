@@ -1,5 +1,5 @@
-
 package reittitemp;
+
 import java.util.HashMap;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -30,7 +30,7 @@ public class BfsTest {
     }
 
     @Test
-    public void BFSToimiii() {
+    public void reittiLoytyyYhdenEsteenLuota() {
 
         Vertex[][] nGrid = graph.getNodeGrid();
         Vertex s = nGrid[0][0];
@@ -41,6 +41,56 @@ public class BfsTest {
         u = u.getPrev();
         u = u.getPrev();
         assertEquals(s, u);
+    }
+    
+    @Test
+    public void reittiaEiLoydy(){
+        int grid[][] = new int[50][50];
+        for (int i = 0; i < 50; i++) {
+            grid[1][i] = 1;
+        }
+        graph = new Verkko(grid);
+        graph.initGraph();
+        Vertex[][] nGrid = graph.getNodeGrid();
+        Vertex s = nGrid[0][0];
+        bfs.findRoute(s);
+        nGrid = graph.getNodeGrid();
+        Vertex u = nGrid[2][0];
+        
+        while(true){
+            if(u == s){
+                break;
+            }else if(u == null){
+                break;
+            }
+            u = u.getPrev();
+        }
+        assertEquals(null,u);
+    }
+
+    @Test
+    public void reittiLoytyyAinoanAukonLapi() {
+        int grid[][] = new int[50][50];
+        for (int i = 0; i < 49; i++) {
+            grid[1][i] = 1;
+        }
+        graph = new Verkko(grid);
+        graph.initGraph();
+        Vertex[][] nGrid = graph.getNodeGrid();
+        Vertex s = nGrid[0][0];
+        bfs.findRoute(s);
+        nGrid = graph.getNodeGrid();
+        Vertex u = nGrid[2][0];
+        
+        while(true){
+            if(u == s){
+                break;
+            }else if(u == null){
+                break;
+            }
+            u = u.getPrev();
+        }
+        assertEquals(s,u);
     }
 
 }
