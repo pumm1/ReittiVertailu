@@ -57,7 +57,6 @@ public class Kayttoliittyma extends JFrame implements KeyListener {
         JPanel panel = new JPanel(new GridLayout(50, 50));
         squares = new JButton[50][50];
         contents = getContentPane();
-//        contents.setLayout(new GridLayout(50, 50));
         gridHandler = new GridHandler(squares, grid, this);
 
         for (int i = 0; i < 50; i++) {

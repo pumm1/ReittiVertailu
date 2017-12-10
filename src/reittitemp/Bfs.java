@@ -18,7 +18,6 @@ public class Bfs implements Algorithm {
         verkko = v;
         queue = new Queue<Vertex>(2500);
         nGrid = verkko.getNodeGrid();
-        System.out.println(".......");
     }
     
     /**

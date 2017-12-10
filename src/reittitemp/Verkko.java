@@ -31,7 +31,6 @@ public class Verkko {
             Array<Vertex> a = new Array<>(4);
             list.add(a);
         }
-//        edges = new Array<>(4 * (50 - 2) * (50 - 2) + 3 * (50 - 2) * 4 + 2 * 4);
         vertexes = new Array<>(2500); //ei ehkä tarvita
 
     }
@@ -44,7 +43,6 @@ public class Verkko {
                 grid[i][j] = 0;
             }
         }
-//        initGraph();
     }
 
     public Vertex[][] getNodeGrid() {

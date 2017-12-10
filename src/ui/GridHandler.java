@@ -92,7 +92,6 @@ public class GridHandler implements ActionListener {
      *alustetaan verkko
      */
     public void initGraph() {
-        System.out.println("updating graph..");
         verkko = new Verkko(grid);
         verkko.initGraph();
         for (int i = 0; i < 50; i++) {

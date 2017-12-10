@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="PC" name="reittitemp.QueueTest" skipped="0" tests="1" time="0.054" timestamp="2017-12-10T15:55:31">
+<testsuite errors="0" failures="0" hostname="PC" name="reittitemp.DijkstraTest" skipped="0" tests="3" time="0.092" timestamp="2017-12-10T15:55:30">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="US" />
@@ -64,7 +64,7 @@
     <property name="libs.j2me_common_ant.maven-pom" value="" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner reittitemp.QueueTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/sagu/ReittiVertailu/build/test/results/TEST-reittitemp.QueueTest.xml crashfile=/home/sagu/ReittiVertailu/build/junitvmwatcher5472088227297822560.properties propsfile=/home/sagu/ReittiVertailu/build/junit2672261536716233662.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner reittitemp.DijkstraTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/sagu/ReittiVertailu/build/test/results/TEST-reittitemp.DijkstraTest.xml crashfile=/home/sagu/ReittiVertailu/build/junitvmwatcher4573095023488362281.properties propsfile=/home/sagu/ReittiVertailu/build/junit9010301831697706839.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="build.sysclasspath" value="ignore" />
@@ -427,7 +427,9 @@
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit" />
     <property name="libs.javaee-web-api-7.0.javadoc" value="/home/sagu/netbeans-8.2/enterprise/docs/javaee-doc-api.jar" />
   </properties>
-  <testcase classname="reittitemp.QueueTest" name="jonoToimii" time="0.001" />
+  <testcase classname="reittitemp.DijkstraTest" name="reittiLöytyyYhdenEsteenLuota" time="0.023" />
+  <testcase classname="reittitemp.DijkstraTest" name="ReittiLöytyyAinoanAukonKautta" time="0.007" />
+  <testcase classname="reittitemp.DijkstraTest" name="reittiaEiLoydy" time="0.011" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -44,17 +44,10 @@ public class ButtonHandler implements ActionListener {
                 }
                 loppu = System.currentTimeMillis();
                 aika = loppu - alku;
-                System.out.println("aikaa meni: " + aika + " ms");
                 ui.drawRoute(s, u, aika);
             }
         }
 
     }
-    /*
-    AIKOJA (ms):
-    BFS: 8, 5, 6, 5, 4, 11, 7, 5, 3, 3, 6, 3, 4, 6, 5
-    DFS: 5, 5, 6, 4, 4, 5, 5, 7, 2, 4, 5, 2, 3, 8, 8
-    Dijkstra: 11, 8, 10, 10, 9, 8, 6, 6, 11, 8, 3, 5
-     */
 
 }
