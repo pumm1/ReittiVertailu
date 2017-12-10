@@ -21,3 +21,4 @@ erilaiset reittialgoritmit löytävät. Työ toteutetaan Javalla.
 [Viikkoraportti3](Dokumentaatio/Viikkoraportti3.md)
 [Viikkoraportti4](Dokumentaatio/Viikkoraportti4.md)
 [Viikkoraportti5](Dokumentaatio/Viikkoraportti5.md)
+[Viikkoraportti6](Dokumentaatio/Viikkoraportti6.md)
