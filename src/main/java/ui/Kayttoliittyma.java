@@ -50,6 +50,7 @@ public class Kayttoliittyma extends JFrame implements KeyListener {
         super("ReittiVertailu");
         konsoli = new JTextArea();
         konsoli.setSize(800, 50);
+        konsoli.setEditable(false);
         txt = "";
         konsoliWrite(txt);
         grid = g;

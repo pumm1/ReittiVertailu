@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="PC" name="reittitemp.HeapTest" skipped="0" tests="4" time="0.051" timestamp="2017-12-10T15:55:31">
+<testsuite errors="0" failures="0" hostname="PC" name="reittitemp.HeapTest" skipped="0" tests="4" time="0.05" timestamp="2017-12-11T11:26:53">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="US" />
@@ -64,7 +64,7 @@
     <property name="libs.j2me_common_ant.maven-pom" value="" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner reittitemp.HeapTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/sagu/ReittiVertailu/build/test/results/TEST-reittitemp.HeapTest.xml crashfile=/home/sagu/ReittiVertailu/build/junitvmwatcher7655888783579089026.properties propsfile=/home/sagu/ReittiVertailu/build/junit6969786759067799700.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner reittitemp.HeapTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/sagu/ReittiVertailu/build/test/results/TEST-reittitemp.HeapTest.xml crashfile=/home/sagu/ReittiVertailu/build/junitvmwatcher8779655650546889421.properties propsfile=/home/sagu/ReittiVertailu/build/junit7286994835766017750.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="build.sysclasspath" value="ignore" />
@@ -262,6 +262,7 @@
     <property name="libs.DataBindingME-SVG.src" value="/home/sagu/netbeans-8.2/mobility/sources/netbeans_databindingme_svg-src.zip" />
     <property name="dist.jar" value="dist/ReittiVertailu.jar" />
     <property name="libs.spring-framework400.maven-pom" value="" />
+    <property name="netbeans.automatic.build" value="true" />
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
     <property name="ant.project.name" value="ReittiVertailu" />
     <property name="netbeans.hash.code" value="unique=NB_CND_EXTIDE_GFMOD_JAVA_MOB_PHP_WEBCOMMON_WEBEE06225de40-91ea-4dfe-b099-7a6bbc25215d_14d35c6f-0d75-4d03-9ac8-72ee1cfac50b" />
@@ -288,17 +289,17 @@
     <property name="java.specification.vendor" value="Oracle Corporation" />
     <property name="libs.javac-api.classpath" value="/home/sagu/netbeans-8.2/java/modules/ext/nb-javac-api.jar" />
     <property name="java.version" value="1.8.0_144" />
-    <property name="run.jvmargs.ide" value="" />
     <property name="javadoc.version" value="false" />
+    <property name="run.jvmargs.ide" value="" />
     <property name="libs.MySQLDriver.javadoc" value="" />
     <property name="org.openide.version" value="deprecated" />
-    <property name="platform.java" value="/home/sagu/jdk1.8.0_144/jre/bin/java" />
     <property name="source.encoding" value="UTF-8" />
+    <property name="platform.java" value="/home/sagu/jdk1.8.0_144/jre/bin/java" />
     <property name="ap.cmd.line.internal" value="" />
     <property name="libs.eclipselinkmodelgen.maven-pom" value="" />
     <property name="libs.jsp-compilation-syscp.javadoc" value="" />
-    <property name="libs.eclipselinkmodelgen.javadoc" value="" />
     <property name="libs.javaee-endorsed-api-7.0.classpath" value="/home/sagu/netbeans-8.2/enterprise/modules/ext/javaee7-endorsed/javax.annotation-api.jar:/home/sagu/netbeans-8.2/enterprise/modules/ext/javaee7-endorsed/javax.xml.soap-api.jar:/home/sagu/netbeans-8.2/enterprise/modules/ext/javaee7-endorsed/jaxb-api-osgi.jar:/home/sagu/netbeans-8.2/enterprise/modules/ext/javaee7-endorsed/jaxws-api.jar:/home/sagu/netbeans-8.2/enterprise/modules/ext/javaee7-endorsed/jsr181-api.jar" />
+    <property name="libs.eclipselinkmodelgen.javadoc" value="" />
     <property name="libs.metro.javadoc" value="/home/sagu/netbeans-8.2/enterprise/docs/metro-1.4-doc.zip" />
     <property name="libs.struts.maven-pom" value="" />
     <property name="netbeans.home+have.tests" value="true" />
@@ -309,10 +310,10 @@
     <property name="libs.jaxb.classpath" value="/home/sagu/netbeans-8.2/ide/modules/ext/jaxb/jaxb-impl.jar:/home/sagu/netbeans-8.2/ide/modules/ext/jaxb/jaxb-xjc.jar:/home/sagu/netbeans-8.2/ide/modules/ext/jaxb/jaxb1-impl.jar:/home/sagu/netbeans-8.2/ide/modules/ext/jaxb/activation.jar:/home/sagu/netbeans-8.2/ide/modules/ext/jaxb/api/jaxb-api.jar:/home/sagu/netbeans-8.2/ide/modules/ext/jaxb/api/jsr173_1.0_api.jar" />
     <property name="php.global.include.path" value="" />
     <property name="do.depend" value="false" />
-    <property name="dist.javadoc.dir" value="dist/javadoc" />
     <property name="libs.j2me_common_ant.classpath" value="/home/sagu/netbeans-8.2/mobility/modules/org-netbeans-modules-j2me-common-ant.jar:/home/sagu/netbeans-8.2/java/modules/org-netbeans-modules-classfile.jar" />
-    <property name="libs.spring-webmvc3.0.classpath" value="/home/sagu/netbeans-8.2/java/modules/ext/spring-3.0/spring-webmvc-3.2.7.RELEASE.jar" />
+    <property name="dist.javadoc.dir" value="dist/javadoc" />
     <property name="libs.swing-layout.classpath" value="/home/sagu/netbeans-8.2/platform/modules/ext/swing-layout-1.0.4.jar" />
+    <property name="libs.spring-webmvc3.0.classpath" value="/home/sagu/netbeans-8.2/java/modules/ext/spring-3.0/spring-webmvc-3.2.7.RELEASE.jar" />
     <property name="libs.javaee-web-api-7.0.maven-pom" value="" />
     <property name="libs.restlib.src" value="" />
     <property name="javac.source" value="1.8" />
@@ -345,13 +346,13 @@
     <property name="libs.groovy-all.javadoc" value="" />
     <property name="securerandom.source" value="file:/dev/./urandom" />
     <property name="testng.debug.mode" value="" />
-    <property name="javac.fork" value="true" />
     <property name="libs.groovy-all.classpath" value="/home/sagu/netbeans-8.2/groovy/modules/ext/groovy-all.jar" />
+    <property name="javac.fork" value="true" />
     <property name="java.awt.printerjob" value="sun.print.PSPrinterJob" />
     <property name="default.javac.source" value="1.8" />
     <property name="debug-transport-by-os" value="dt_socket" />
-    <property name="libs.MySQLDriver.src" value="" />
     <property name="sun.jnu.encoding" value="UTF-8" />
+    <property name="libs.MySQLDriver.src" value="" />
     <property name="build.test.results.dir" value="build/test/results" />
     <property name="java.runtime.version" value="1.8.0_144-b01" />
     <property name="jna.platform.library.path" value="/usr/lib/x86_64-linux-gnu:/lib/x86_64-linux-gnu:/lib64:/usr/lib:/lib:/lib/i386-linux-gnu:/usr/lib/i386-linux-gnu:/usr/lib/x86_64-linux-gnu/libfakeroot:/usr/lib/x86_64-linux-gnu/mesa-egl:/usr/lib/x86_64-linux-gnu/mesa:/usr/lib/i386-linux-gnu/mesa" />
@@ -360,17 +361,17 @@
     <property name="user.timezone" value="" />
     <property name="nb.junit.single" value="false" />
     <property name="ant.file.type.ReittiVertailu-impl" value="file" />
-    <property name="libs.javaee-endorsed-api-6.0.maven-pom" value="" />
     <property name="libs.JAVADB_DRIVER_LABEL.javadoc" value="" />
+    <property name="libs.javaee-endorsed-api-6.0.maven-pom" value="" />
     <property name="netbeans.dirs" value="/home/sagu/netbeans-8.2/nb:/home/sagu/netbeans-8.2/ergonomics:/home/sagu/netbeans-8.2/ide:/home/sagu/netbeans-8.2/extide:/home/sagu/netbeans-8.2/java:/home/sagu/netbeans-8.2/apisupport:/home/sagu/netbeans-8.2/webcommon:/home/sagu/netbeans-8.2/websvccommon:/home/sagu/netbeans-8.2/enterprise:/home/sagu/netbeans-8.2/mobility:/home/sagu/netbeans-8.2/profiler:/home/sagu/netbeans-8.2/python:/home/sagu/netbeans-8.2/php:/home/sagu/netbeans-8.2/identity:/home/sagu/netbeans-8.2/harness:/home/sagu/netbeans-8.2/cnd:/home/sagu/netbeans-8.2/cndext:/home/sagu/netbeans-8.2/dlight:/home/sagu/netbeans-8.2/groovy:/home/sagu/netbeans-8.2/extra:/home/sagu/netbeans-8.2/javacard:/home/sagu/netbeans-8.2/javafx:/home/sagu/netbeans-8.2/tmcbeans:" />
-    <property name="libs.jstl.javadoc" value="/home/sagu/netbeans-8.2/enterprise/docs/javaee-doc-api.jar" />
     <property name="libs.jsf20.javadoc" value="/home/sagu/netbeans-8.2/enterprise/docs/javaee-doc-api.jar" />
+    <property name="libs.jstl.javadoc" value="/home/sagu/netbeans-8.2/enterprise/docs/javaee-doc-api.jar" />
     <property name="java.ext.dirs" value="/home/sagu/jdk1.8.0_144/jre/lib/ext:/usr/java/packages/lib/ext" />
     <property name="libs.metro.src" value="" />
     <property name="libs.absolutelayout.classpath" value="/home/sagu/netbeans-8.2/java/modules/ext/AbsoluteLayout.jar" />
     <property name="excludes" value="" />
-    <property name="libs.restlib.maven-pom" value="" />
     <property name="libs.metro.classpath" value="/home/sagu/netbeans-8.2/ide/modules/ext/jaxb/activation.jar:/home/sagu/netbeans-8.2/enterprise/modules/ext/metro/webservices-api.jar:/home/sagu/netbeans-8.2/enterprise/modules/ext/metro/webservices-extra-api.jar:/home/sagu/netbeans-8.2/enterprise/modules/ext/metro/webservices-extra.jar:/home/sagu/netbeans-8.2/enterprise/modules/ext/metro/webservices-rt.jar:/home/sagu/netbeans-8.2/enterprise/modules/ext/metro/webservices-tools.jar" />
+    <property name="libs.restlib.maven-pom" value="" />
     <property name="libs.jpa2-persistence.javadoc" value="/home/sagu/netbeans-8.2/java/modules/ext/docs/javax.persistence-2.1.0-doc.zip" />
     <property name="libs.DataBindingME.javadoc" value="/home/sagu/netbeans-8.2/mobility/modules/docs/netbeans_databindingme-api.zip" />
     <property name="apple.laf.useScreenMenuBar" value="true" />
@@ -380,8 +381,8 @@
     <property name="do.mkdist" value="true" />
     <property name="libs.absolutelayout.src" value="" />
     <property name="libs.jpa20-persistence.classpath" value="/home/sagu/netbeans-8.2/java/modules/ext/eclipselink/javax.persistence_2.1.0.v201304241213.jar" />
-    <property name="ant.file.ReittiVertailu" value="/home/sagu/ReittiVertailu/build.xml" />
     <property name="os.version" value="4.10.0-40-generic" />
+    <property name="ant.file.ReittiVertailu" value="/home/sagu/ReittiVertailu/build.xml" />
     <property name="application.args" value="" />
     <property name="libs.EclipseLink-GlassFish-v3.javadoc" value="/home/sagu/netbeans-8.2/enterprise/docs/javaee-doc-api.jar" />
     <property name="libs.javaee-api-7.0.maven-pom" value="" />
@@ -392,8 +393,8 @@
     <property name="libs.hibernate4-support.maven-pom" value="" />
     <property name="libs.Comet-GlassFish-v3.src" value="" />
     <property name="libs.restlib.javadoc" value="" />
-    <property name="libs.JAXB-ENDORSED.classpath" value="/home/sagu/netbeans-8.2/ide/modules/ext/jaxb/api/jaxb-api.jar" />
     <property name="nb.internal.action.name" value="test" />
+    <property name="libs.JAXB-ENDORSED.classpath" value="/home/sagu/netbeans-8.2/ide/modules/ext/jaxb/api/jaxb-api.jar" />
     <property name="libs.javaee-api-7.0.javadoc" value="/home/sagu/netbeans-8.2/enterprise/docs/javaee-doc-api.jar" />
     <property name="libs.eclipselink.classpath" value="/home/sagu/netbeans-8.2/java/modules/ext/eclipselink/eclipselink.jar:/home/sagu/netbeans-8.2/java/modules/ext/eclipselink/javax.persistence_2.1.0.v201304241213.jar:/home/sagu/netbeans-8.2/java/modules/ext/eclipselink/org.eclipse.persistence.jpa.jpql_2.5.2.v20140319-9ad6abd.jar" />
     <property name="libs.beans-binding.javadoc" value="/home/sagu/netbeans-8.2/java/docs/beansbinding-1.2.1-doc.zip" />
@@ -405,10 +406,10 @@
     <property name="libs.hamcrest.src" value="" />
     <property name="run.jvmargs" value="" />
     <property name="libs.hibernate4-persistence.classpath" value="/home/sagu/netbeans-8.2/java/modules/ext/hibernate4/antlr-2.7.7.jar:/home/sagu/netbeans-8.2/java/modules/ext/hibernate4/c3p0-0.9.2.1.jar:/home/sagu/netbeans-8.2/java/modules/ext/hibernate4/hibernate-c3p0-4.3.1.Final.jar:/home/sagu/netbeans-8.2/java/modules/ext/hibernate4/mchange-commons-java-0.2.3.4.jar:/home/sagu/netbeans-8.2/java/modules/ext/hibernate4/dom4j-1.6.1.jar:/home/sagu/netbeans-8.2/java/modules/ext/hibernate4/ehcache-core-2.4.3.jar:/home/sagu/netbeans-8.2/java/modules/ext/hibernate4/hibernate-ehcache-4.3.1.Final.jar:/home/sagu/netbeans-8.2/java/modules/ext/hibernate4/hibernate-core-4.3.1.Final.jar:/home/sagu/netbeans-8.2/java/modules/ext/hibernate4/jboss-logging-3.1.3.GA.jar:/home/sagu/netbeans-8.2/java/modules/ext/hibernate4/hibernate-commons-annotations-4.0.4.Final.jar:/home/sagu/netbeans-8.2/java/modules/ext/hibernate4/hibernate-entitymanager-4.3.1.Final.jar:/home/sagu/netbeans-8.2/java/modules/ext/hibernate4/javassist-3.18.1-GA.jar:/home/sagu/netbeans-8.2/java/modules/ext/hibernate4/jboss-transaction-api_1.2_spec-1.0.0.Final.jar:/home/sagu/netbeans-8.2/java/modules/ext/hibernate4/slf4j-api-1.6.1.jar:/home/sagu/netbeans-8.2/java/modules/ext/hibernate4/slf4j-simple-1.6.1.jar:/home/sagu/netbeans-8.2/java/modules/ext/hibernate4/hibernate-jpa-2.1-api-1.0.0.Final.jar" />
-    <property name="dist.archive.excludes" value="" />
     <property name="libs.JAXB-ENDORSED.src" value="" />
-    <property name="libs.DataBindingME-PIM.src" value="/home/sagu/netbeans-8.2/mobility/sources/netbeans_databindingme_pim-src.zip" />
+    <property name="dist.archive.excludes" value="" />
     <property name="libs.testng.javadoc" value="/home/sagu/netbeans-8.2/platform/docs/testng-6.8.1-javadoc.zip" />
+    <property name="libs.DataBindingME-PIM.src" value="/home/sagu/netbeans-8.2/mobility/sources/netbeans_databindingme_pim-src.zip" />
     <property name="libs.PostgreSQLDriver.classpath" value="/home/sagu/netbeans-8.2/ide/modules/ext/postgresql-9.4.1209.jar" />
     <property name="libs.jsf12.maven-pom" value="" />
     <property name="libs.hibernate4-persistencemodelgen.classpath" value="/home/sagu/netbeans-8.2/java/modules/ext/hibernate4/hibernate-jpamodelgen-4.3.1.Final.jar" />
@@ -418,17 +419,17 @@
     <property name="libs.CopyLibs.src" value="" />
     <property name="libs.jsp-compilation.classpath" value="/home/sagu/netbeans-8.2/extide/ant/lib/ant.jar:/home/sagu/netbeans-8.2/enterprise/modules/ext/servlet3.1-jsp2.3-api.jar:/home/sagu/netbeans-8.2/enterprise/modules/ext/glassfish-jspparser-4.0.jar:/home/sagu/netbeans-8.2/enterprise/modules/ext/jsf-2_2/javax.faces.jar:/home/sagu/netbeans-8.2/enterprise/modules/ext/jstl-api.jar:/home/sagu/netbeans-8.2/extide/ant/lib/ant-launcher.jar" />
     <property name="ant.version" value="Apache Ant(TM) version 1.9.7 compiled on April 9 2016" />
-    <property name="file.encoding" value="UTF-8" />
     <property name="build.classes.excludes" value="**/*.java,**/*.form" />
-    <property name="javadoc.nonavbar" value="false" />
+    <property name="file.encoding" value="UTF-8" />
     <property name="jdkBug6558476" value="false" />
+    <property name="javadoc.nonavbar" value="false" />
     <property name="libs.spring-webmvc4.0.classpath" value="/home/sagu/netbeans-8.2/java/modules/ext/spring-4/spring-webmvc-4.0.1.RELEASE.jar" />
     <property name="platform.active" value="default_platform" />
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit" />
     <property name="libs.javaee-web-api-7.0.javadoc" value="/home/sagu/netbeans-8.2/enterprise/docs/javaee-doc-api.jar" />
   </properties>
   <testcase classname="reittitemp.HeapTest" name="lisaysToimii" time="0.002" />
-  <testcase classname="reittitemp.HeapTest" name="heapifyToimii" time="0.001" />
+  <testcase classname="reittitemp.HeapTest" name="heapifyToimii" time="0.0" />
   <testcase classname="reittitemp.HeapTest" name="delMinToimii" time="0.0" />
   <testcase classname="reittitemp.HeapTest" name="konstrukotriToimii" time="0.0" />
   <system-out><![CDATA[]]></system-out>

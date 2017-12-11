@@ -10,13 +10,24 @@ repositories {
 sourceSets.main.java.srcDirs = ['src']
 mainClassName = 'Main'
 
-dependencies {
 
+dependencies {
+		compile 'junit:junit:4.12'
     testCompile 'junit:junit:4.12'
 }
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
+
+
+sourceSets{
+	main{
+		java{
+			srcDir 'src'
+		}
+	}
+}
+
 
 jacocoTestReport {
     reports {
@@ -24,5 +35,7 @@ jacocoTestReport {
         html.enabled = true
     }
 }
+
+
 
 check.dependsOn jacocoTestReport
