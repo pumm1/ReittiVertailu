@@ -18,7 +18,6 @@ dependencies {
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
-
 sourceSets{
 	main{
 		java{
@@ -35,6 +34,13 @@ jacocoTestReport {
     }
 }
 
-
+jar {
+    manifest {
+			attributes(
+				'Class-Path': configurations.compile.collect { it.getName()}.join(' '),
+        'Main-Class': 'main.java.Main'
+			)
+    }
+}
 
 check.dependsOn jacocoTestReport
