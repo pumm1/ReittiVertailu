@@ -1,10 +1,11 @@
-package ui;
+package main.java.ui;
+
+import main.java.reittitemp.Algorithm;
+import main.java.reittitemp.Verkko;
+import main.java.reittitemp.Vertex;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import reittitemp.Algorithm;
-import reittitemp.Vertex;
-import reittitemp.Verkko;
 
 public class ButtonHandler implements ActionListener {
 

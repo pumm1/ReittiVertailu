@@ -1,5 +1,4 @@
-
-package reittitemp;
+package main.java.reittitemp;
 
 public class Queue<T> {
 

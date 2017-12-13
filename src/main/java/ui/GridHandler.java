@@ -1,11 +1,12 @@
-package ui;
+package main.java.ui;
+
+import main.java.reittitemp.Verkko;
 
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
-//import reittitemp.Graph;
-import reittitemp.Verkko;
+
 
 public class GridHandler implements ActionListener {
 

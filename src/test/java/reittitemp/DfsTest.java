@@ -1,15 +1,18 @@
 package reittitemp;
 
-import org.junit.After;
-import org.junit.AfterClass;
+import main.java.reittitemp.Dfs;
+import main.java.reittitemp.Verkko;
+import main.java.reittitemp.Vertex;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
+
+import static org.junit.Assert.assertEquals;
 
 public class DfsTest {
+
     private Verkko graph;
     private Dfs dfs;
+
     @Before
     public void setUp() {
         int grid[][] = new int[50][50];

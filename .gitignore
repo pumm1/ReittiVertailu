@@ -4,3 +4,8 @@
 gradle.properties
 /ReittiVertailu/nbproject/private/
 /ReittiVertailu/build/
+
+out/
+build/
+idea/
+.idea/

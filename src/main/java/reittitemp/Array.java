@@ -1,5 +1,5 @@
+package main.java.reittitemp;
 
-package reittitemp;
 public class Array<T> {
     
     /**

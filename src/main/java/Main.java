@@ -1,8 +1,9 @@
+package main.java;
 
 
+import main.java.ui.Kayttoliittyma;
 
 import java.util.Random;
-import ui.Kayttoliittyma;
 
 public class Main {
 
