@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="reittitemp.VertexTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2017-12-11T11:41:04" hostname="PC" time="0.003">
-  <properties/>
-  <testcase name="visitToimii" classname="reittitemp.VertexTest" time="0.002"/>
-  <testcase name="konstruktoriToimii" classname="reittitemp.VertexTest" time="0.0"/>
-  <testcase name="naapurienYhdistäminenToimii" classname="reittitemp.VertexTest" time="0.001"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="reittitemp.DijkstraTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2017-12-11T11:41:04" hostname="PC" time="0.133">
-  <properties/>
-  <testcase name="reittiLöytyyYhdenEsteenLuota" classname="reittitemp.DijkstraTest" time="0.065"/>
-  <testcase name="ReittiLöytyyAinoanAukonKautta" classname="reittitemp.DijkstraTest" time="0.03"/>
-  <testcase name="reittiaEiLoydy" classname="reittitemp.DijkstraTest" time="0.037"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

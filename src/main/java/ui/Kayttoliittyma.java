@@ -1,4 +1,6 @@
-package ui;
+package main.java.ui;
+
+import main.java.reittitemp.*;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -11,12 +13,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.WindowConstants;
-import reittitemp.Bfs;
-import reittitemp.Dfs;
-import reittitemp.Dijkstra;
-//import reittitemp.Graph;
-import reittitemp.Vertex;
-import reittitemp.Verkko;
+
 
 public class Kayttoliittyma extends JFrame implements KeyListener {
 

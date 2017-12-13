@@ -1,16 +1,12 @@
 package reittitemp;
 
-import java.util.HashMap;
-import org.junit.After;
-import org.junit.AfterClass;
+import main.java.reittitemp.Bfs;
+import main.java.reittitemp.Verkko;
+import main.java.reittitemp.Vertex;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
-import reittitemp.Bfs;
 
-import reittitemp.Verkko;
-import reittitemp.Vertex;
+import static org.junit.Assert.assertEquals;
 
 public class BfsTest {
 

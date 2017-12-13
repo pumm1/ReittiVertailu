@@ -1,6 +1,5 @@
-package reittitemp;
+package main.java.reittitemp;
 
-import java.util.*;
 
 public class Verkko {
 

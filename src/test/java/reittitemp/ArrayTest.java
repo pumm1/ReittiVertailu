@@ -1,13 +1,11 @@
-
 package reittitemp;
-import org.junit.After;
-import org.junit.AfterClass;
+
+import main.java.reittitemp.Array;
+import main.java.reittitemp.Vertex;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
-import reittitemp.Array;
-import reittitemp.Vertex;
+
+import static org.junit.Assert.assertEquals;
 
 public class ArrayTest {
 

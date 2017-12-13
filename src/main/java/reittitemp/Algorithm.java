@@ -1,5 +1,5 @@
+package main.java.reittitemp;
 
-package reittitemp;
 public interface Algorithm {
 
     public void findRoute(Vertex s);

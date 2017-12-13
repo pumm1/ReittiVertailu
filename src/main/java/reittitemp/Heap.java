@@ -1,4 +1,4 @@
-package reittitemp;
+package main.java.reittitemp;
 
 public class Heap {
 

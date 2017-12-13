@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="reittitemp.DfsTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2017-12-11T11:41:04" hostname="PC" time="0.077">
-  <properties/>
-  <testcase name="ainoaReittiLöytyy" classname="reittitemp.DfsTest" time="0.043"/>
-  <testcase name="reittiaEiLöydy" classname="reittitemp.DfsTest" time="0.022"/>
-  <testcase name="reittiLöytyyHelposti" classname="reittitemp.DfsTest" time="0.011"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

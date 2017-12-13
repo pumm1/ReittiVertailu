@@ -1,5 +1,5 @@
+package main.java.reittitemp;
 
-package reittitemp;
 public class Dfs implements Algorithm { //edes jotain, jonka toteuttaminen ei tuottanut ongelmia
 
     /**

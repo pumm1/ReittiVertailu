@@ -1,15 +1,11 @@
-
 package reittitemp;
 
-import org.junit.After;
-import org.junit.AfterClass;
+import main.java.reittitemp.Heap;
+import main.java.reittitemp.Vertex;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
-import reittitemp.Heap;
-import reittitemp.Vertex;
 
+import static org.junit.Assert.assertEquals;
 
 public class HeapTest {
 
