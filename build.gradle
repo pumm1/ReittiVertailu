@@ -1,14 +1,13 @@
-
 apply plugin: 'java'
 apply plugin: 'application'
 apply plugin: 'jacoco'
-repositories {
 
+repositories {
     jcenter()
 }
 
 sourceSets.main.java.srcDirs = ['src']
-mainClassName = 'Main'
+mainClassName = 'main.java.Main'
 
 
 dependencies {
